@@ -1,0 +1,90 @@
+.header-container{
+    background-color: var(--light-blue);
+
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+
+.btns-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.unilife{
+    padding-left: 5%;
+    color: white;
+}
+
+.header-btns{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+
+}
+
+.shortlist{
+    display: flex;
+}
+
+.contact{
+    display: flex;
+}
+
+.header-btn-text{
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.heart-icon{
+    width: 19px;
+    height: 17.4px;
+}
+
+.mail-icon{
+    width: 19px;
+    height: 15.6px;
+}
+
+.white{
+    color: white;
+}
+
+.menu{
+    display: none;
+}
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */
+@media only screen and (max-width: 400px) {
+
+.contact{
+    display: none;
+}
+
+.shortlist{
+    display: none;
+}
+
+.header-btns{
+    justify-content: flex-end;
+}
+
+.menu{
+    display: block;
+}
+
+.unilife{
+    width: 72px;
+}
+}
