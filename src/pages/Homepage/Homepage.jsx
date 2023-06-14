@@ -1,10 +1,27 @@
 import React from 'react'
 import './Homepage.css'
-Slider
+import Slider from '../../components/Slider/Slider'
+import { useState, useEffect } from 'react'
+import CityDropdown from '../../components/CityDropdown/CityDropdown'
 
 function Homepage() {
+
+
+
+  // useEffect(()=>{
+  //   console.log('displaying homepage')
+  //   setCurrentPage('Homepage');
+  // }, []);
+
   return (
-    <div>Homepage</div>
+    <div className='homepage-container'>
+      <Slider header={"Find student homes with bills included"} />
+      <div className="form-container">
+        <form>
+          <CityDropdown />
+        </form>
+      </div>
+    </div>
   )
 }
 
