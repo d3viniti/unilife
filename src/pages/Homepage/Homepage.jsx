@@ -17,9 +17,7 @@ function Homepage() {
     <div className='homepage-container'>
       <Slider header={"Find student homes with bills included"} />
       <div className="form-container">
-        <form>
           <CityDropdown />
-        </form>
       </div>
     </div>
   )

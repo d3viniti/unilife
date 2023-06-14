@@ -29,17 +29,16 @@ function CityDropdown() {
 
         //will also need a useEffect to be triggered every time there's a change in selectedOption
 
+        const [options, setOptions] = useState([])
+        //how do I set/map these into options for my dropdown?
+    
+
+
   return (
     <div>
         <div className='select-city-form'>
             {
-                cityData.map((city)=>{
-                    
-                    <select>
-                    <option>{city?.name}</option>
-                    </select>
-                    //how do i get these options to render on the page in a drop down?
-                })
+            cityData.map((city)=><p key={city.id}>{city?.name}</p>)
             }
         </div>
         <form>
