@@ -41,8 +41,6 @@ function Homepage() {
       }, []
     )
 
-   
-
 
   return (
     <div className='homepage-container'>
@@ -58,7 +56,10 @@ function Homepage() {
           <div className="top-city-container">
             {
               topCities.map(city=>
-                <div className='top-city-card' key={city?.id} >
+                <div className='top-city-card' key={city?.id} 
+                style={{backgroundImage:`url("${city?.image_url}")`, 
+                backgroundSize:'cover', backgroundPosition:'center',
+                backgroundRepeat:'no-repeat'}}>
                   <h2>{`${city?.name}`}</h2>
                   <p>{`${city?.property_count} properties`}</p>
                  </div>
