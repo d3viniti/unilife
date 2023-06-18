@@ -5,4 +5,25 @@
     background-repeat: no-repeat;
     height: 40vh;
     position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
 }
+
+.slider-container::before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /*last number controls opacity*/
+    z-index: -1;
+}
+

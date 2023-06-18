@@ -5,13 +5,13 @@ import { useState } from 'react'
 
 function Slider({header, paragraph}) {
 
-
   
 
   return (
     <div className='slider-container'>
         <h1>{header}</h1>
         <p>{paragraph}</p>
+       
     </div>
   )
 }

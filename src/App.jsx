@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage/Homepage'
 import CityDetailsPage from './pages/CityDetailsPage/CityDetailsPage';
 import HomeDetailsPage from './pages/HomeDetailsPage/HomeDetailsPage';
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage/SeeAllCitiesPage';
+import Footer from './components/Footer/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,6 +26,7 @@ function App() {
         <Route path='/CityDetails' element={<CityDetailsPage />} />
         <Route path='/HomeDetails' element={<HomeDetailsPage />} /> 
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }

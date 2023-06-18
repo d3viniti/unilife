@@ -1,3 +1,50 @@
+.homepage-container{
+    position: relative;
+}
+
+.dropdown > *{
+    width: 60vw;
+}
+
+p{
+    padding-top: 20px;
+}
+
+select{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 200px;
+}
+
+button{
+    border: none;
+    background-color: var(--accent-blue);
+    color: white;
+
+    max-width: fit-content;
+    padding: 10px 15px;
+    margin-left: 5vw;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+.dropdown{
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px;
+    width: 60vw;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+    
+
+    position: absolute;
+    top: 35vh;
+    left: 20%;
+}
+
 .top-city-container{
     display: grid;
     gap: 2rem;
@@ -14,7 +61,10 @@
     align-items: center;
     position: relative;
     max-width: 90vw;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+
 }
 
 .top-city-card{

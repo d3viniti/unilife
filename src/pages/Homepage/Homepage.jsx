@@ -44,15 +44,17 @@ function Homepage() {
 
   return (
     <div className='homepage-container'>
-      <Slider header={"Find student homes with bills included"} />
+      <Slider header={"Find student homes with bills included"} paragraph={"A simple and faster way to search for student accommodation"} />
       <div className="cities-container">
-          <div className="dropdown">
+      <div className="dropdown">
             <select id='select-city'>
             {
               cityData.map(city=><option key={city.id}>{`${city?.name}`}</option>)
             }
             </select>
+            <button type='submit'>Find Homes</button>
           </div>
+      <h3>Student Accomodations in our top cities</h3>
           <div className="top-city-container">
             {
               topCities.map(city=>
