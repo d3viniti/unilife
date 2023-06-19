@@ -2,6 +2,11 @@
     position: relative;
 }
 
+.cities-container{
+    display: flex;
+    flex-direction: column;
+}
+
 .dropdown > *{
     width: 60vw;
 }
@@ -45,6 +50,12 @@ button{
     left: 20%;
 }
 
+h3{
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .top-city-container{
     display: grid;
     gap: 2rem;
@@ -63,7 +74,7 @@ button{
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 50px;
 
 }
 

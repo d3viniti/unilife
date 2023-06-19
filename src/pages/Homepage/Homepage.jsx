@@ -46,28 +46,28 @@ function Homepage() {
     <div className='homepage-container'>
       <Slider header={"Find student homes with bills included"} paragraph={"A simple and faster way to search for student accommodation"} />
       <div className="cities-container">
-      <div className="dropdown">
+        <div className="dropdown">
             <select id='select-city'>
-            {
+              {
               cityData.map(city=><option key={city.id}>{`${city?.name}`}</option>)
-            }
+              }
             </select>
             <button type='submit'>Find Homes</button>
-          </div>
-      <h3>Student Accomodations in our top cities</h3>
-          <div className="top-city-container">
+        </div>
+        <h3>Student Accomodations in our top cities</h3>
+        <div className="top-city-container">
             {
-              topCities.map(city=>
-                <div className='top-city-card' key={city?.id} 
-                style={{backgroundImage:`url("${city?.image_url}")`, 
-                backgroundSize:'cover', backgroundPosition:'center',
-                backgroundRepeat:'no-repeat'}}>
-                  <h2>{`${city?.name}`}</h2>
-                  <p>{`${city?.property_count} properties`}</p>
-                 </div>
-              )
+            topCities.map(city=>
+            <div className='top-city-card' key={city?.id} 
+            style={{backgroundImage:`url("${city?.image_url}")`, 
+            backgroundSize:'cover', backgroundPosition:'center',
+            backgroundRepeat:'no-repeat'}}>
+            <h2>{`${city?.name}`}</h2>
+            <p>{`${city?.property_count} properties`}</p>
+             </div>
+            )
             }
-          </div>
+        </div>
       </div>
     </div>
   )
