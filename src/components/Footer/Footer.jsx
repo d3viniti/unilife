@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
 
 function Footer() {
   return (
@@ -14,9 +15,9 @@ function Footer() {
          <div className="social">
           <h3>Let's Socialize</h3>
           <div className="socials">
-            <a>Facebook</a>
-            <a>Twitter</a>
-            <a>Instagram</a>
+              <a><BsFacebook/> Facebook</a>
+              <a><BsInstagram/> Instagram</a>
+              <a><BsTwitter/> Twitter</a>
           </div>
         </div>
       </div>  

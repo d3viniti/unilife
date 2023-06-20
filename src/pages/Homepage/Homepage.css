@@ -51,7 +51,6 @@ button{
 }
 
 h3{
-    margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -62,11 +61,6 @@ h3{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
    
-
-    /* margin: 0 auto; */
-    border: 2px solid red;
-
-    /* justify-content: space-evenly; */
     justify-items: center;
     align-content: space-evenly;
     align-items: center;
@@ -106,4 +100,127 @@ h3{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.25); /*last number controls opacity*/
     z-index: -1; /*use z index to chnage layer positioning of overlay*/
+}
+
+.btn{
+    display: block;
+    align-self: center;
+    margin: 30px 0;
+    border: none;
+    text-decoration: none;
+    background-color: var(--accent-blue);
+    color: white;
+
+    max-width: fit-content;
+    padding: 12px 15px;
+    margin-left: 5vw;
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.middle-container1{
+    background-color: #F6FAFD;
+    border-radius: 24px;
+    max-width: 80%;
+    padding: 60px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.value-props{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.value-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding-top: 30px;
+    width: 25%;
+}
+
+.title{
+    padding-top: 30px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.value-box p{
+    font-size: 20px;
+}
+
+.search-icon{
+    width: 96px;
+    height: auto;
+}
+
+.compare-icon{
+    width: 96px;
+    height: auto;
+}
+
+.bills-icon{
+    width: 85px;
+    height: auto;
+}
+
+.middle-container2{
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+
+   
+    background-color: pink;
+}
+
+.search-compare-btn{
+    align-self: flex-start;
+    margin-top: 30px;
+
+}
+
+.p{ 
+    max-width: 440px;
+}
+
+.section{
+    display: flex;
+}
+
+.section-text{
+    padding-left: 20px;
+}
+
+.section-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.offering-icon{
+    width: 52.8px;
+    height: 52.6px;
+}
+
+.heart-icon{
+    width: 50.7px;
+    height: 44.5px;
 }

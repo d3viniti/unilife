@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 70px 0;
 
     background-color: var(--light-blue);
     color: white;
@@ -42,7 +42,13 @@ input{
 }
 
 .socials > *{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
     padding-top: 10px;
+    padding-left: 10px;
+
+    background-color: pink;
 }
 
 .black-block{

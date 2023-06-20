@@ -3,6 +3,14 @@ import './Homepage.css'
 import Slider from '../../components/Slider/Slider'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
+import bills from '../../assets/Vectorbills.png'
+import search from '../../assets/Vectorsearch.png'
+import compare from '../../assets/Vectorcompare.png'
+import handhome from '../../assets/Vectorhandhome.png'
+import favoriteheart from '../../assets/Vectorfavorite.png'
+import textman from '../../assets/textman.png'
+
 
 function Homepage() {
 
@@ -40,7 +48,7 @@ function Homepage() {
         .catch(err=>console.log(err))
       }, []
     )
-
+// where is my student accomodations heading? Also need to retouch footer styling
 
   return (
     <div className='homepage-container'>
@@ -67,6 +75,47 @@ function Homepage() {
              </div>
             )
             }
+        </div>
+        <Link to='#' className='btn'>See All Cities</Link>
+        <div className="middle-container1">
+            <h2>Compare all inclusive student homes.</h2>
+            <div className="value-props">
+              <div className="value-box">
+                <img className='search-icon' src={search}/>
+                <p className='title'>Search</p>
+                <p>Find your dream home in the perfect area near your university.</p>
+              </div>
+              <div className="value-box">
+                <img className='compare-icon' src={compare}/>
+                <p className='title'>Compare</p>
+                <p>Compare student accommodation to find the right home for you.</p>
+              </div>
+              <div className="value-box">
+                <img className='bills-icon'src={bills}/>
+                <p className='title'>Bills Included</p>
+                <p>Bills are included in all rent prices. No hidden fees.</p>
+              </div>
+            </div>
+        </div>
+        <div className="middle-container2">
+            <div className="text">
+              <div className="section">
+                <img src={handhome} alt="offering-icon" className='offering-icon'/>
+                <div className="section-text p">
+                  <p className="section-title p">Best Selection</p>
+                  <p>Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
+                </div>
+              </div>
+              <div className="section">
+                <img src={favoriteheart} alt="heart-icon" className='heart-icon' />
+                <div className="section-text">
+                  <p className="section-title">Your favourite</p>
+                  <p>Shortlist your favourite properties and send enquiries in one click.</p>
+                </div>
+              </div>
+              <Link to='#' className='btn search-compare-btn'>Search & Compare</Link>
+            </div>
+            <img src={textman} className='textman'/>
         </div>
       </div>
     </div>
