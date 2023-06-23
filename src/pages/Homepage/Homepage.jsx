@@ -57,7 +57,7 @@ function Homepage() {
         <div className="dropdown">
             <select id='select-city'>
               {
-              cityData.map(city=><option key={city.id}>{`${city?.name}`}</option>)
+              cityData.map(city=><option key={city?.id}>{`${city?.name}`}</option>)
               }
             </select>
             <button type='submit'>Find Homes</button>
@@ -76,7 +76,7 @@ function Homepage() {
             )
             }
         </div>
-        <Link to='#' className='btn'>See All Cities</Link>
+        <Link to='/SeeAllCities' className='btn'>See All Cities</Link>
         <div className="middle-container1">
             <h2>Compare all inclusive student homes.</h2>
             <div className="value-props">

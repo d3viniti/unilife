@@ -16,11 +16,11 @@ function Header() {
             </div>
             <div className="header-btns">
                 <div className="shortlist white">
-                    <img src={heart} alt='heart' className='heart-icon' />
+                    <img src={heart} alt='heart' className='head-heart-icon' />
                     <p className='header-btn-text'>Shortlist</p>
                 </div>
                 <div className="contact white">
-                    <img src={mail} alt='Contact us Button' className='mail-icon' />
+                    <img src={mail} alt='Contact us Button' className='head-mail-icon' />
                     <p className='header-btn-text'>Contact Us</p>
                 </div>
                 <img src={menu} className='menu'/>

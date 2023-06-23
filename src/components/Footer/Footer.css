@@ -54,8 +54,9 @@ input{
 .black-block{
     display: flex;
     justify-content: space-between;
-    padding: 5px 50px;
-
+    padding: 0 50px;
+    padding-bottom: 10px;;
+    
 
     color: gray;
     background-color: black;
@@ -67,7 +68,6 @@ input{
     align-items: center;
 
     width: 40vw;
-    border: red 1px solid;
 }
 
 .right{
@@ -76,7 +76,6 @@ input{
     align-items: center;
 
     width: 15vw;
-    border: red 1px solid;
 }
 
 p{
