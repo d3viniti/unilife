@@ -2,8 +2,9 @@ import {React, useEffect, useState} from 'react'
 import "./SeeAllCitiesPage.css"
 import Slider from '../../components/Slider/Slider'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
-function SeeAllCitiesPage() {
+function SeeAllCitiesPage({baseUrl}) {
 
   // useEffect(()=>{
   //   setCurrentPage('SeeAllCitiesPage');
@@ -26,13 +27,13 @@ function SeeAllCitiesPage() {
   return (
     <div>
        <Slider header={"Student Accomodation"} paragraph={"UniLife have student accommodation available across the UK. Whatever you’re after, we can help you find the right student accommodation for you."} />
-        <div className="cities-container">
+        <div className="all-cities-container">
          {
-          allCities.map(city=><div className='city' key={city?.id}>{`${city?.name}`}</div>)
+          allCities.map(city=><Link to={`/CityDetailsPage/${city?.id}`}><div className='city' key={city?.id}>{`${city?.name}`}</div></Link>)
          }
         </div>
     </div>
   )
 }
-
+//how do i link the data from each city to its own city details page?
 export default SeeAllCitiesPage
