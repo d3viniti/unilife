@@ -25,13 +25,14 @@ function SeeAllCitiesPage({baseUrl}) {
 
 
   return (
-    <div>
-       <Slider header={"Student Accomodation"} paragraph={"UniLife have student accommodation available across the UK. Whatever you’re after, we can help you find the right student accommodation for you."} />
-        <div className="all-cities-container">
+    <div className='see-all-cities-page'>
+      <Slider header={"Student Accomodation"} paragraph={"UniLife have student accommodation available across the UK. Whatever you’re after, we can help you find the right student accommodation for you."} />
+      <h3 className='grid-heading'>Search by City</h3>      
+      <div className="all-cities-container">
          {
-          allCities.map(city=><Link to={`/CityDetailsPage/${city?.id}`}><div className='city' key={city?.id}>{`${city?.name}`}</div></Link>)
+          allCities.map(city=><Link to={`/CityDetailsPage/${city?.id}`} className='city'><div key={city?.id}>{`${city?.name}`}</div></Link>)
          }
-        </div>
+      </div>
     </div>
   )
 }
