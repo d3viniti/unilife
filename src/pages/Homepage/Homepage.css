@@ -1,3 +1,7 @@
+.city-link{
+    text-decoration: none;
+}
+
 .homepage-container{
     position: relative;
 }
@@ -48,6 +52,10 @@ button{
     position: absolute;
     top: 35vh;
     left: 20%;
+}
+
+select{
+    max-width: 60%;
 }
 
 h3{

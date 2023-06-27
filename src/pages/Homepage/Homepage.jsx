@@ -12,7 +12,7 @@ import favoriteheart from '../../assets/Vectorfavorite.png'
 import textman from '../../assets/textman.png'
 
 
-function Homepage() {
+function Homepage({city}) {
 
   //create state for the number of cities
   const [cityData, setCityData] = useState([]);
@@ -66,13 +66,15 @@ function Homepage() {
         <div className="top-city-container">
             {
             topCities.map(city=>
-            <div className='top-city-card' key={city?.id} 
-            style={{backgroundImage:`url("${city?.image_url}")`, 
-            backgroundSize:'cover', backgroundPosition:'center',
-            backgroundRepeat:'no-repeat'}}>
-            <h2>{`${city?.name}`}</h2>
-            <p>{`${city?.property_count} properties`}</p>
+            <Link to={`/citydetails/${city?._id}`} key={city?.id} className='city-link'>
+            <div className='top-city-card' 
+              style={{backgroundImage:`url("${city?.image_url}")`, 
+              backgroundSize:'cover', backgroundPosition:'center',
+              backgroundRepeat:'no-repeat'}}>
+              <h2>{`${city?.name}`}</h2>
+              <p>{`${city?.property_count} properties`}</p>
              </div>
+             </Link>
             )
             }
         </div>

@@ -5,15 +5,16 @@ import heart from '../../assets/Vectorheart.png'
 import mail from '../../assets/Vectormail.png'
 import menu from '../../assets/Vectormenu.png'
 import unilife from '../../assets/UniLifeLogo.png'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
     <div className='header-container'>
         <div className="btns-container">
-            <div className="logo-container">
+            <Link to='/' className="logo-container">
                 <img src={homeLogo} alt='UniLife Logo' />
                 <img src={unilife} alt='Unilife' className='unilife'/>
-            </div>
+            </Link>
             <div className="header-btns">
                 <div className="shortlist white">
                     <img src={heart} alt='heart' className='head-heart-icon' />
