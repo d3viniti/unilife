@@ -15,8 +15,13 @@
     width: 60vw;
 }
 
-p{
-    padding-top: 20px;
+.spacing{
+    padding-top: 10px;
+}
+
+.card-text{
+    font-weight: 400;
+    font-size: 20px;
 }
 
 select{
@@ -78,6 +83,10 @@ h3{
     margin-right: auto;
     margin-top: 50px;
 
+}
+
+.city-card-name{
+    font-weight: 600;
 }
 
 .top-city-card{
@@ -196,8 +205,6 @@ h3{
     justify-content: center;
     width: 50%;
 
-   
-    background-color: pink;
 }
 
 .search-compare-btn{

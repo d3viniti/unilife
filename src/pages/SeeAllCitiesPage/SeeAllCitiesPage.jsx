@@ -30,7 +30,7 @@ function SeeAllCitiesPage({baseUrl}) {
       <h3 className='grid-heading'>Search by City</h3>      
       <div className="all-cities-container">
          {
-          allCities.map(city=><Link to={`/CityDetailsPage/${city?.id}`} className='city'><div key={city?.id}>{`${city?.name}`}</div></Link>)
+          allCities.map(city=><Link to={`/citydetails/${city?._id}`} className='city' key={city?.id}><div>{`${city?.name}`}</div></Link>)
          }
       </div>
     </div>

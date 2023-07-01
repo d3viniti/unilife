@@ -71,8 +71,8 @@ function Homepage({city}) {
               style={{backgroundImage:`url("${city?.image_url}")`, 
               backgroundSize:'cover', backgroundPosition:'center',
               backgroundRepeat:'no-repeat'}}>
-              <h2>{`${city?.name}`}</h2>
-              <p>{`${city?.property_count} properties`}</p>
+              <h2 className='city-card-name'>{`${city?.name}`}</h2>
+              <p className='spacing'>{`${city?.property_count} properties`}</p>
              </div>
              </Link>
             )
