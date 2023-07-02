@@ -35,22 +35,26 @@ useEffect(()=>{
     //store data in state
     axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
     .then(res=>{
-      console.log(res.data)
+      // console.log(res.data)
       setProperties(res.data.response)
     })
     .catch(err=>console.log(err))
   },[])
 
-  useEffect(()=>{
-    axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
-    .then(res=>{
-      console.log(res.data.response[0].images)
-      //store data
-      setPropertyImages(res.data.response[0].images)
-    })
-    .catch(err=>console.log(err))
-  },[])
-  
+  console.log(properties)
+  // useEffect(()=>{
+  //   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
+  //   .then(res=>{
+  //     for(let i=0; i < res.data.response.length; i++){
+  //     console.log(res.data.response[i].images)
+  //     console.log(res.data.response)
+  //     setPropertyImages(res.data.response[i].images)
+  //     }
+  //     //store data
+  //     setPropertyImages(res.data.response[0].images)
+  //   })
+  //   .catch(err=>console.log(err))
+  // },[])
 
 
   
@@ -64,9 +68,9 @@ useEffect(()=>{
       <h3 className='property-container-header'>{properties.length} homes in {cityName}</h3>
       <div className='properties-container'>
             {
-            properties.map(property=>
+            properties.map((property, index)=>
             <div className='property-card' key={property?._id}>
-              <img src='#'/>
+              <img className='property-card-img' src={propertyImages[index]}/>
               <div className='blue-info'>
                 <div className='bills'>
                   <p className='price'>£{property?.rent}</p>
@@ -91,8 +95,5 @@ useEffect(()=>{
 }
 
 
-//how do I loop through the different images?
+//how can I add just the first img of each objects' imgs to my state and map them to their respective card?
 export default CityDetailsPage
-//style={{backgroundImage:`url("${propertyImages[0]}")`, 
-// backgroundSize:'cover', backgroundPosition:'center',
-// backgroundRepeat:'no-repeat', width:'25rem', height: '16rem'

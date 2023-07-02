@@ -33,3 +33,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.property-card-img{
+width: 200px;
+height: auto;
+}
