@@ -17,7 +17,6 @@ function CityDetailsPage() {
   //this page for showing the details of a specific city
   const {cityId} = useParams()
   const [properties, setProperties] = useState([])
-  const [propertyImages, setPropertyImages] = useState([])
   const [cityName, setCityName] = useState('');
 
 useEffect(()=>{
@@ -42,19 +41,19 @@ useEffect(()=>{
   },[])
 
   console.log(properties)
-  // useEffect(()=>{
-  //   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
-  //   .then(res=>{
-  //     for(let i=0; i < res.data.response.length; i++){
-  //     console.log(res.data.response[i].images)
-  //     console.log(res.data.response)
-  //     setPropertyImages(res.data.response[i].images)
-  //     }
-  //     //store data
-  //     setPropertyImages(res.data.response[0].images)
-  //   })
-  //   .catch(err=>console.log(err))
-  // },[])
+  useEffect(()=>{
+    axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
+    .then(res=>{
+      for(let i=0; i < res.data.response.length; i++){
+      console.log(res.data.response[i].images)
+      console.log(res.data.response)
+      setPropertyImages(res.data.response[i].images)
+      }
+      //store data
+      setPropertyImages(res.data.response[0].images)
+    })
+    .catch(err=>console.log(err))
+  },[])
 
 
   
@@ -70,7 +69,7 @@ useEffect(()=>{
             {
             properties.map((property, index)=>
             <div className='property-card' key={property?._id}>
-              <img className='property-card-img' src={propertyImages[index]}/>
+              <img className='property-card-img' src={property.images[0]}/>
               <div className='blue-info'>
                 <div className='bills'>
                   <p className='price'>£{property?.rent}</p>
