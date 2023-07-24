@@ -54,20 +54,35 @@ input{
 .black-block{
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
-    padding-bottom: 10px;;
+    padding: 20px 50px;
+    max-height: 145px;
     
 
     color: gray;
     background-color: black;
 }
 
+.black-block .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.black-block p{
+    font-size: 16px;
+}
+
 .left{
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
 
     width: 40vw;
+}
+
+.left p{
+    padding-top: 10px;
 }
 
 .right{
@@ -78,6 +93,3 @@ input{
     width: 15vw;
 }
 
-p{
-    font-size: 16px;
-}

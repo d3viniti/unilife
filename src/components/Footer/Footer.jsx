@@ -29,7 +29,7 @@ function Footer() {
         </div>
         <div className="right">
           <p>2022</p>
-          <p>copyright unilife</p>
+          <p><span>&copy;</span> unilife</p>
         </div>
         </div>
        </div>

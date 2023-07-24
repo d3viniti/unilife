@@ -63,9 +63,10 @@ select{
     max-width: 60%;
 }
 
-h3{
+.grid-header{
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10vh;
 }
 
 .top-city-container{
@@ -141,12 +142,15 @@ h3{
     border-radius: 24px;
     max-width: 80%;
     padding: 60px;
-    margin: 0 auto;
+    margin: 50px auto;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+
+    flex-shrink: 1;
 }
 
 .value-props{
@@ -168,6 +172,7 @@ h3{
 
 .title{
     padding-top: 30px;
+    padding-bottom: 10px;
     font-size: 28px;
     font-weight: 500;
 }
@@ -193,8 +198,8 @@ h3{
 
 .middle-container2{
     display: flex;
-    justify-content: space-evenly;
-    max-width: 90%;
+    justify-content: center;
+    max-width: 80vw;
     margin: 0 auto;
     padding-top: 40px;
 }
@@ -202,9 +207,14 @@ h3{
 .text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     width: 50%;
 
+
+}
+
+.textman{
+    max-width: 40vw;
 }
 
 .search-compare-btn{
@@ -238,4 +248,52 @@ h3{
 .heart-icon{
     width: 50.7px;
     height: 44.5px;
+}
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */
+@media only screen and (max-width: 740px) {
+
+/* .value-box p{
+font-size: 16px;
+}
+
+.value-box img{
+    max-width: 12vw;
+}
+
+.value-text{
+
+} */
+
+/* -------- grid ----------- */
+
+.top-city-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.value-props{
+    flex-direction: column;
+    align-items: center;
+}
+
+.value-box{
+    width: 80%;
+    margin-top: 40px;
+}
+
+/* ------------------ middlesection2 -------------- */
+
+.middle-container2 .section{
+    display: none;
+}
+
+.search-compare-btn{
+    width: 80vw;
+}
+
+.textman{
+    display: none;
+}
+
 }

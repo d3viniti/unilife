@@ -62,7 +62,7 @@ function Homepage({city}) {
             </select>
             <button type='submit'>Find Homes</button>
         </div>
-        <h3>Student Accomodations in our top cities</h3>
+        <h3 className='grid-header'>Student Accomodations in our top cities</h3>
         <div className="top-city-container">
             {
             topCities.map(city=>
@@ -85,17 +85,17 @@ function Homepage({city}) {
               <div className="value-box">
                 <img className='search-icon' src={search}/>
                 <p className='title'>Search</p>
-                <p>Find your dream home in the perfect area near your university.</p>
+                <p className='value-text'>Find your dream home in the perfect area near your university.</p>
               </div>
               <div className="value-box">
                 <img className='compare-icon' src={compare}/>
                 <p className='title'>Compare</p>
-                <p>Compare student accommodation to find the right home for you.</p>
+                <p className='value-text'>Compare student accommodation to find the right home for you.</p>
               </div>
               <div className="value-box">
                 <img className='bills-icon'src={bills}/>
                 <p className='title'>Bills Included</p>
-                <p>Bills are included in all rent prices. No hidden fees.</p>
+                <p className='value-text'>Bills are included in all rent prices. No hidden fees.</p>
               </div>
             </div>
         </div>
