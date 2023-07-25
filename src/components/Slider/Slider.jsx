@@ -9,8 +9,8 @@ function Slider({header, paragraph}) {
 
   return (
     <div className='slider-container'>
-        <h1>{header}</h1>
-        <p>{paragraph}</p>
+        <h1 className='slider-header'>{header}</h1>
+        <p className='slider-p'>{paragraph}</p>
        
     </div>
   )

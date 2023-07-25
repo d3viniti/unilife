@@ -93,3 +93,24 @@ input{
     width: 15vw;
 }
 
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */
+@media only screen and (max-width: 500px) {
+
+.blue-block{
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.email{
+    width: 70vw;
+}
+
+.social{
+    width: 70vw;
+    margin-top: 20px;
+}
+
+}
