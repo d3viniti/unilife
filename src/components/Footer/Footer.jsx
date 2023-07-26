@@ -9,7 +9,7 @@ function Footer() {
         <div className="blue-block">
           <div className="email">
           <h3>Keep in touch</h3>
-          <p>Curious about new offerings? Sign up for our weekly newsletter and stay informed.</p>
+          <p className='email-p'>Curious about new offerings? Sign up for our weekly newsletter and stay informed.</p>
           <input placeholder='Your email'></input>
           </div>
          <div className="social">

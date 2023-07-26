@@ -29,21 +29,22 @@
 
 .header-btns{
     display: flex;
-    justify-content: space-between;
-    width: 25%;
-
+    justify-content: flex-end;
+    width: 50%;
 }
 
 .shortlist{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid yellow;
+    
 }
 
 .contact{
     display: flex;
     justify-content: center;
+
+    margin-left: 10%;
 }
 
 .header-btn-text{

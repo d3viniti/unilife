@@ -66,7 +66,8 @@ useEffect(()=>{
     }
   }
   window.addEventListener('resize', handleResize)
-},)
+  return ()=> window.removeEventListener('resize', handleResize)
+}, [topCities])
 
   return (
     <div className='homepage-container'>
@@ -121,8 +122,8 @@ useEffect(()=>{
             <div className="text">
               <div className="section">
                 <img src={handhome} alt="offering-icon" className='offering-icon'/>
-                <div className="section-text p">
-                  <p className="section-title p">Best Selection</p>
+                <div className="section-text">
+                  <p className="section-title">Best Selection</p>
                   <p>Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
                 </div>
               </div>

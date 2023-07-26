@@ -6,6 +6,19 @@
 .grid-heading{
     margin-top: 5vh;
     font-weight: 500;
+    font-size: 36px;
+
+    text-align: center;
+}
+
+.slider-header{
+    font-size: 40px;
+}
+
+.slider-p{
+    padding-top: 15px;
+    width: 75vw;
+    font-size: 20px;
 }
 
 .all-cities-container{
@@ -20,15 +33,64 @@
     position: relative;
     width: 85vw;
     margin: 50px auto;
+    margin-bottom: 100px;
 }
 
 .city{
     text-decoration: none;
     color: black;
     border: 1px solid lightgray;
-    padding: 10px 12px;
+    padding: 15px 17px;
     width: 100%;
     border-radius: 10px;
+    font-size: 28px;
 
     text-align: center;
 }
+
+.city:hover{
+    background-color: #3A5295;
+    color: white;
+}
+
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
+@media only screen and (max-width: 740px) {
+
+    .all-cities-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        position: relative;
+        width: 85vw;
+        margin: 50px auto;
+        margin-bottom: 100px;
+    }
+
+}
+
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */
+@media only screen and (max-width: 500px) {
+
+    .all-cities-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
+        position: relative;
+        width: 85vw;
+        margin: 50px auto;
+        margin-bottom: 100px;
+    }
+
+}
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */

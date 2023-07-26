@@ -63,10 +63,14 @@ select{
     max-width: 100px;
 }
 
+    /* ----------- grid ------------- */
+
 .grid-header{
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
+
+    font-size: 36px;
 }
 
 .top-city-container{
@@ -121,6 +125,8 @@ select{
     z-index: -1; /*use z index to chnage layer positioning of overlay*/
 }
 
+    /* ----------- grid ------------- */
+
 .btn{
     display: block;
     align-self: center;
@@ -137,6 +143,7 @@ select{
 
     cursor: pointer;
 }
+    /* ----------- middle-container1 ------------- */
 
 .middle-container1{
     background-color: #F6FAFD;
@@ -152,6 +159,10 @@ select{
     text-align: center;
 
     flex-shrink: 1;
+}
+
+.middle-container1 h2{
+    font-size: 36px;
 }
 
 .value-props{
@@ -178,7 +189,7 @@ select{
     font-weight: 500;
 }
 
-.value-box p{
+.value-text{
     font-size: 20px;
 }
 
@@ -197,6 +208,10 @@ select{
     height: auto;
 }
 
+    /* ----------- middle-container1 ------------- */
+
+    /* ----------- middle-container2 ------------- */
+
 .middle-container2{
     display: flex;
     justify-content: center;
@@ -212,6 +227,10 @@ select{
     width: 50%;
 
 
+}
+
+.section-text p{
+    padding-top: 15px;
 }
 
 .textman{
@@ -251,6 +270,8 @@ select{
     height: 44.5px;
 }
 
+ /* ----------- middle-container2 ------------- */
+
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 @media only screen and (max-width: 740px) {
 
@@ -277,6 +298,10 @@ font-size: 16px;
 }
 
 /* -------- grid ----------- */
+
+.grid-header{
+    font-size: 24px;
+}
 
 .top-city-container{
     grid-template-columns: repeat(2, 1fr);
@@ -341,6 +366,13 @@ font-size: 16px;
 .top-city-card{
     width: 300px;
 }
+    /* -------- grid ----------- */
+    /* -------- middlecontainer1 ----------- */
+
+    .middle-container1 h2 {
+        font-size: 32px;
+    }
 
 
+    /* -------- middlecontainer1 ----------- */
 }

@@ -22,6 +22,15 @@
     width: 30vw;
 }
 
+.email h3{
+font-size: 36px;
+}
+
+.email-p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
 input{
     border: none;
     padding: 10px;
@@ -32,6 +41,10 @@ input{
 .social{
     display: flex;
     flex-direction: column;
+}
+
+.social h3{
+    font-size: 36px;
 }
 
 .socials{
@@ -45,10 +58,9 @@ input{
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding-top: 10px;
+    padding-top: 20px;
     padding-left: 10px;
-
-    background-color: pink;
+    font-size: 20px;
 }
 
 .black-block{
@@ -87,10 +99,10 @@ input{
 
 .right{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
 
-    width: 15vw;
+    width: 40%;
 }
 
 

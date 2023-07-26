@@ -35,6 +35,60 @@
 }
 
 .property-card-img{
-width: 200px;
+width: 400px;
 height: auto;
+}
+
+
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
+@media only screen and (max-width: 1500px) {
+
+    .property-card-img{
+        width: 250px;
+        height: auto;
+        }
+
+}
+
+
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
+@media only screen and (max-width: 950px) {
+
+    .properties-container{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        
+    
+    }
+
+
+    /* .property-card-img{
+        width: 20px;
+        height: auto;
+        } */
+
+
+
+}
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */
+@media only screen and (max-width: 650px) {
+
+    .properties-container{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(1, 1fr);
+        
+    
+    }
+
+
+    .property-card-img{
+        width: 80vw;
+        height: auto;
+        }
+
+
+
 }

@@ -69,7 +69,7 @@ useEffect(()=>{
             {
             properties.map((property, index)=>
             <div className='property-card' key={property?._id}>
-              <img className='property-card-img' src={property.images[0]}/>
+              <img className='property-card-img' src={property.images[0]} />
               <div className='blue-info'>
                 <div className='bills'>
                   <p className='price'>£{property?.rent}</p>
