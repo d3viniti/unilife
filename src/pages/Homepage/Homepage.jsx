@@ -45,6 +45,7 @@ function Homepage({city}) {
         .then(res=>{
           console.log(res.data.response)
           setTopCities(res.data.response)
+          setQueryCities(res.data.response)
         })
         .catch(err=>console.log(err))
       }, []
