@@ -21,10 +21,6 @@
     position: relative;
     max-width: 80vw;
     margin: 70px auto;
-
-
-    background-color: pink;
-
 }
 
 .property-card{
@@ -38,8 +34,114 @@
 .property-card-img{
 width: 400px;
 height: auto;
+
+border-radius: 15px 15px 0 0;
 }
 
+
+.blue-info{
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #3A5295;
+    color: white;
+    padding: 15px 15px;
+}
+
+.bills{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.price{
+    font-size: 24px;
+}
+
+.text{
+    font-size: 12px;
+    width: 100%;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 40%;
+
+    border: 1px solid red;
+
+}
+
+.bath{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+
+
+.bed{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.bed-icon, .bath-icon{
+    width: 32px;
+    height: auto;
+}
+
+.add-details{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 15px 15px 15px;
+}
+
+.add-details-child{
+    font-size: 16px;
+}
+
+.address{ 
+    display: flex;
+    padding: 15px;
+
+    align-items: center;
+}
+
+.pin{
+    padding-bottom: 3px;
+    color:#3A5295
+}
+
+.address-text{
+    padding-left: 5px;
+}
+
+.twelve{
+    font-size: 12px;
+}
+
+.sixteen{
+    font-size: 16px;
+}
+
+.view-home{
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+
+    padding: 15px 0;
+    border-top: solid 1px #CED3D8;
+}
+
+.view-home-text{
+    padding-left: 10px;
+}
 
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 @media only screen and (max-width: 1500px) {

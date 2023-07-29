@@ -4,7 +4,10 @@ import Slider from '../../components/Slider/Slider'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import { BiBed } from "react-icons/bi";
+import { MdOutlineBathtub } from "react-icons/md";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { BsHouseDoor } from "react-icons/bs";
 
 
 function CityDetailsPage() {
@@ -69,7 +72,7 @@ useEffect(()=>{
             {
             properties.map((property, index)=>
             <div className='property-card' key={property?._id}>
-              <img className='property-card-img' src={property.images[0]} />
+              <img className='property-card-img' src={property.images[0]}/>
               <div className='blue-info'>
                 <div className='bills'>
                   <p className='price'>£{property?.rent}</p>
@@ -77,14 +80,27 @@ useEffect(()=>{
                 </div>
                 <div className='icons'>
                   <div className="bed">
-                  
+                    <BiBed className='bed-icon sixteen'/>
+                    <p className="bed-number sixteen pad-left-10">{property?.bedroom_count}</p>
                   </div>
                   <div className="bath">
-
+                    <MdOutlineBathtub className='bath-icon pad-left-10' />
+                    <p className="bath-number">{property?.bathroom_count}</p>
                   </div>
                 </div>    
               </div>
-              {property?.availability}
+              <div className="add-details">
+                <p className="add-details-child">{property?.property_type}</p>
+                <p className="add-details-child">{property?.furnished}</p>
+              </div>
+              <div className="address">
+                <MdOutlineLocationOn className='pin' alt='pin-icon' />
+                <p className="twelve address-text">{property?.address.street}, {property?.address.city}, {property?.address.postcode}</p>
+              </div>
+                <Link to='#' className='view-home'>
+                  <BsHouseDoor className='house-icon' alt="House Icon" />
+                  <p className='view-home-text sixteen'>View Home</p>
+                </Link>
             </div>  
             )
             }

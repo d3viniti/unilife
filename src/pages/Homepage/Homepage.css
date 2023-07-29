@@ -150,7 +150,7 @@ select{
     border-radius: 24px;
     max-width: 80%;
     padding: 60px;
-    margin: 50px auto;
+    margin: 15px auto;
 
     display: flex;
     flex-direction: column;
@@ -217,7 +217,6 @@ select{
     justify-content: center;
     max-width: 80vw;
     margin: 0 auto;
-    padding-top: 40px;
 }
 
 .text{
@@ -239,7 +238,7 @@ select{
 
 .search-compare-btn{
     align-self: flex-start;
-    margin-top: 30px;
+    margin: 40px auto;
 
 }
 
@@ -249,6 +248,7 @@ select{
 
 .section{
     display: flex;
+    margin-top: 20px;
 }
 
 .section-text{
@@ -333,6 +333,8 @@ font-size: 16px;
 
 .search-compare-btn{
     width: 80vw;
+    align-self: center;
+    margin: 30px auto;
 }
 
 .textman{
