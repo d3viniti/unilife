@@ -91,6 +91,10 @@ border-radius: 15px 15px 0 0;
     height: auto;
 }
 
+.number{
+    align-self: center;
+}
+
 .add-details{
     display: flex;
     justify-content: space-between;
@@ -140,6 +144,28 @@ border-radius: 15px 15px 0 0;
 .view-home-text{
     padding-left: 10px;
 }
+
+    /* --------------- middle container ------- */
+
+    .middle-container{
+        display: flex;
+        justify-content: center;
+
+        width: 85vw;
+        padding: 30px;
+        margin: 0 auto;
+        border: 1px solid pink;
+        background-color: #F6FAFD;        
+    }
+
+    .middle-container-paragraph{
+        padding-top: 15px;
+    }
+
+    .middle-container-img{
+        width: 560px;
+        height: auto;
+    }
 
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 @media only screen and (max-width: 1500px) {

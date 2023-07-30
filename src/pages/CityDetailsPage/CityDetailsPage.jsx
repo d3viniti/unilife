@@ -8,7 +8,7 @@ import { BiBed } from "react-icons/bi";
 import { MdOutlineBathtub } from "react-icons/md";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { BsHouseDoor } from "react-icons/bs";
-
+import midImg from '../../assets/city-details-img.png'
 
 function CityDetailsPage() {
 
@@ -104,6 +104,15 @@ useEffect(()=>{
             </div>  
             )
             }
+      </div>
+      <div className="middle-container">
+        <div className="middle-container-text">
+          <h3 className='middle-container-header'>Being a student in {cityName}</h3>
+          <p className='middle-container-paragraph'>Leeds is a lively and multicultural city with a large student population. It is quite a compact city, so it is easy to get around and has a community feel. Leeds is the perfect mix of city and town life and has something to offer to anyone who calls it home.
+
+Leeds is home to three universities, the University of Leeds, Leeds Trinity University and Leeds Beckett University</p>
+        </div>
+        <img className="middle-container-img" src={midImg}></img>
       </div>
     </div>
   )
