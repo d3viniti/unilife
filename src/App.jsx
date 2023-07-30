@@ -24,7 +24,8 @@ function App() {
         <Route path='/' element={<Homepage currentPage={currentPage} baseUrl={baseUrl}/>} /> 
         <Route path='/SeeAllCities' element={<SeeAllCitiesPage baseUrl={baseUrl}/>} />
         <Route path='/CityDetails/:cityId' element={<CityDetailsPage />} />
-        <Route path='/HomeDetails' element={<HomeDetailsPage />} /> 
+        <Route path='/HomeDetails/:propertyId' element={<HomeDetailsPage />} /> 
+       
       </Routes>
       <Footer />
     </BrowserRouter>

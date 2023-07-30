@@ -91,6 +91,10 @@ select{
 
 }
 
+.top-city-container:nth-child(8){
+    display: none;
+}
+
 .city-card-name{
     font-weight: 600;
 }

@@ -18,7 +18,7 @@ function Homepage({city}) {
   const [cityData, setCityData] = useState([]);
   const [options, setOptions] = useState([]);
   const [topCities, setTopCities] = useState([]);
-  const [queryCities, setQueryCities] = useState([])
+  const [queryCities, setQueryCities] = useState([]);
 
     //when page loads I need to know how many cities
     useEffect(
@@ -46,6 +46,7 @@ function Homepage({city}) {
           console.log(res.data.response)
           setTopCities(res.data.response)
           setQueryCities(res.data.response)
+          console.log(queryCities)
         })
         .catch(err=>console.log(err))
       }, []
