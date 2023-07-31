@@ -1,0 +1,64 @@
+.home-details-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #CED3D8;
+    border-radius: 15px;
+}
+
+.address{
+    /* how can I put a border on the bottom that doesn't 
+    take the full length of the container?*/
+    text-align: center;
+    font-size: 36px;
+}
+
+.info-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.grid-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: pink;
+    
+}
+
+.grid-child-info{
+    display: flex;
+    justify-content: space-evenly;
+    color: #3A5295;
+
+}
+
+.number{
+    font-size: 40px;
+}
+
+.text{
+    font-size: 24px;
+
+}
+
+/* ---------------------------------- MOBILE STYLING ------------------------------------- */
+@media only screen and (max-width: 500px) {
+
+    .home-details-container{
+        flex-direction: column;
+    }
+
+
+}
