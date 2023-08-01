@@ -45,8 +45,8 @@ function Homepage({city}) {
         .then(res=>{
           console.log(res.data.response)
           setTopCities(res.data.response)
-          setQueryCities(res.data.response)
-          console.log(queryCities)
+          // setQueryCities(res.data.response)
+          // console.log(queryCities)
         })
         .catch(err=>console.log(err))
       }, []
@@ -57,19 +57,19 @@ function Homepage({city}) {
 
 //create useEffect to only display 8 cities when screensize is smaller 
 //than 740px
-useEffect(()=>{
-  const handleResize = () =>{
-    console.log(window.innerWidth)
-    if(window.innerWidth <= 740){
-      const tempCities = topCities.filter((item, index)=>index<topCities.length-1)
-      setQueryCities(tempCities)
-    } else{
-      setQueryCities(topCities)
-    }
-  }
-  window.addEventListener('resize', handleResize)
-  return ()=> window.removeEventListener('resize', handleResize)
-}, [topCities])
+// useEffect(()=>{
+//   const handleResize = () =>{
+//     console.log(window.innerWidth)
+//     if(window.innerWidth <= 740){
+//       const tempCities = topCities.filter((item, index)=>index<topCities.length-1)
+//       setQueryCities(tempCities)
+//     } else{
+//       setQueryCities(topCities)
+//     }
+//   }
+//   window.addEventListener('resize', handleResize)
+//   return ()=> window.removeEventListener('resize', handleResize)
+// }, [topCities])
 
   return (
     <div className='homepage-container'>
@@ -86,7 +86,7 @@ useEffect(()=>{
         <h3 className='grid-header'>Student Accomodations in our top cities</h3>
         <div className="top-city-container">
             {
-            queryCities.map(city=>
+            topCities.map(city=>
             <Link to={`/citydetails/${city?._id}`} key={city?.id} className='city-link'>
             <div className='top-city-card' 
               style={{backgroundImage:`url("${city?.image_url}")`, 
