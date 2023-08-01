@@ -27,6 +27,12 @@ function CityDetailsPage({property}) {
   const [uniDescription, setUniDescription] = useState('')
   const [studentLife, setStudentLife] = useState('')
 
+
+  //useEffect to run anytime there is a change in the dropdowns selected
+useEffect(()=>{
+
+},[])
+
 useEffect(()=>{
   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
   .then(res=> {
