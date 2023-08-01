@@ -73,7 +73,7 @@ border-radius: 15px 15px 0 0;
 
 .bath{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 50%;
 }
 
@@ -82,7 +82,7 @@ border-radius: 15px 15px 0 0;
 .bed{
     display: flex;
     width: 50%;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .bed-icon, .bath-icon{
@@ -91,8 +91,10 @@ border-radius: 15px 15px 0 0;
     height: auto;
 }
 
-.number{
+.count{
     align-self: center;
+    font-size: 16px;
+    padding-left: 5px;
 }
 
 .add-details{
@@ -104,6 +106,7 @@ border-radius: 15px 15px 0 0;
 
 .add-details-child{
     font-size: 16px;
+    font-weight: 500;
 }
 
 .address{ 
@@ -126,10 +129,6 @@ border-radius: 15px 15px 0 0;
     font-size: 12px;
 }
 
-.sixteen{
-    font-size: 16px;
-}
-
 .view-home-link{
     display: flex;
     justify-content: center;
@@ -149,17 +148,23 @@ border-radius: 15px 15px 0 0;
 
     .middle-container{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
 
+        border-radius: 15px;
         width: 85vw;
-        padding: 30px;
-        margin: 0 auto;
-        border: 1px solid pink;
+        padding: 50px;
+        margin: 0 auto 40px auto;
         background-color: #F6FAFD;        
+    }
+
+
+    .middle-container-header{
+        font-size: 36px;
     }
 
     .middle-container-paragraph{
         padding-top: 15px;
+        font-size: 20px;
     }
 
     .middle-container-img{
@@ -167,6 +172,7 @@ border-radius: 15px 15px 0 0;
         height: auto;
 
         padding-top: 20px;
+        padding-left: 30px;
     }
 
     
@@ -205,6 +211,7 @@ border-radius: 15px 15px 0 0;
     
 .middle-container-img{
     max-width: 100%;
+    padding-left: 0;
 }
 
 }

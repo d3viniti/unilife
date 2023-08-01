@@ -96,11 +96,11 @@ useEffect(()=>{
       <div className='icons'>
         <div className="bed">
           <BiBed className='bed-icon sixteen'/>
-          <p className="number sixteen pad-left-10">{property?.bedroom_count}</p>
+          <p className="count">{property?.bedroom_count}</p>
         </div>
         <div className="bath">
           <MdOutlineBathtub className='bath-icon pad-left-10' />
-          <p className="number">{property?.bathroom_count}</p>
+          <p className="count">{property?.bathroom_count}</p>
         </div>
       </div>    
     </div>
