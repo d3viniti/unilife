@@ -19,6 +19,7 @@ function Homepage({city}) {
   const [options, setOptions] = useState([]);
   const [topCities, setTopCities] = useState([]);
   const [queryCities, setQueryCities] = useState([]);
+  const [selectedCity, setSelectedCity] = useState('');
 
     //when page loads I need to know how many cities
     useEffect(
@@ -71,14 +72,18 @@ function Homepage({city}) {
 //   return ()=> window.removeEventListener('resize', handleResize)
 // }, [topCities])
 
+      const handleSelectChange = (e) => {
+        console.log('change', e.target.value)
+      }
+
   return (
     <div className='homepage-container'>
       <Slider header={"Find student homes with bills included"} paragraph={"A simple and faster way to search for student accommodation"} />
       <div className="cities-container">
         <div className="dropdown">
-            <select id='select-city'>
+            <select id='select-city' onChange={handleSelectChange}>
               {
-              cityData.map(city=><option key={city?.id}>{`${city?.name}`}</option>)
+              cityData.map(city=><option key={city?.id} value={city?.name}>{`${city?.name}`}</option>)
               }
             </select>
             <button type='submit'>Find Homes</button>
