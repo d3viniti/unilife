@@ -6,6 +6,8 @@ import axios from 'axios';
 import { BiBed } from "react-icons/bi";
 import { MdOutlineBathtub } from "react-icons/md";
 import { BiPound } from "react-icons/bi";
+import { AiOutlineHeart } from 'react-icons/ai'
+import { AiOutlineCheck } from 'react-icons/ai'
 
 function HomeDetailsPage() {
 
@@ -19,6 +21,10 @@ const {propertyId} = useParams()
   //create state to hold property data
   const [home, setHome] = useState('')
   const [homeAddress, setHomeAddress] = useState({})
+  const [otherImages, setOtherImages] = useState([])
+  const [mainImage, setMainImage] = useState('')
+  const [keyFeatures, setKeyFeatures] = useState([])
+  const [bedroomPrices, setBedroomPrices] = useState({})
 
   //633d45d461f49f86a21caa1a
   useEffect(()=>{
@@ -26,10 +32,11 @@ const {propertyId} = useParams()
     .then(res=>{
       console.log(res.data)
       setHome(res.data)
-      console.log(home)
-      console.log(res.data.address)
-      setHomeAddress(res.data.address)
-      console.log(homeAddress)
+      setHomeAddress(res.data.address);
+      setMainImage(res.data.images[0]);
+      setOtherImages(res.data.images.splice(1));
+      setKeyFeatures(res.data.key_features)
+      setBedroomPrices(res.data.bedroom_prices)
     })
       
     .catch(err=>console.log(err))
@@ -38,10 +45,25 @@ const {propertyId} = useParams()
 
   return (
     <div className='home-details-container'>
-    <div className="gallery"></div>
-    <div className="home-info">
-      <p className="address">{homeAddress?.street}, {homeAddress?.city}, {homeAddress?.postcode}</p>
-      <div className="info-grid">
+      <div className="gallery-info">
+      <div className="gallery">
+        <div className="gallery-main" style={{backgroundImage: `url(${mainImage})`}}>
+        </div>
+        <div className="gallery-other">
+          {
+            otherImages.map(item => {
+            return <div className='gallery-other-item' key={item?.id}
+            style={{backgroundImage: `url(${item})`}}>
+                    </div>
+             } )
+          }
+        
+        </div>
+      </div>
+      <div className="home-info-btns">
+          <div className="home-info">
+            <p className="address">{homeAddress?.street}, {homeAddress?.city}, {homeAddress?.postcode}</p>
+            <div className="info-grid">
         <div className="grid-child">
           <p className='grid-child-heading'>Bedrooms</p>
           <div className="grid-child-info">
@@ -58,7 +80,7 @@ const {propertyId} = useParams()
         </div>
         <div className="grid-child">
           <p className='grid-child-heading'>Property Type</p>
-          <p className="grid-child-info text">{home?.property_type}</p>
+          <p className="grid-child-info grid-text">{home?.property_type}</p>
         </div>
         <div className="grid-child">
           <p className='grid-child-heading'>Price</p>
@@ -70,19 +92,54 @@ const {propertyId} = useParams()
         <div className="grid-child">
           <p className='grid-child-heading'>Furnished Type</p>
           <div className="grid-child-info">
-            <p className='text'>{home?.furnished}</p>
+            <p className='grid-text'>{home?.furnished}</p>
           </div>
         </div>
         <div className="grid-child">
           <p className='grid-child-heading'>Available from</p>
           <div className="grid-child-info">
-            <p className='text'>{home?.availability}</p>
+            <p className='grid-text'>{home?.availability}</p>
           </div>
         </div>
+            </div>
+          </div>
+          <div className="btn-box">
+        <div className='shortlist-btn'>
+          <AiOutlineHeart />
+          <p>Shortlist</p>
+        </div>
+        <button className='book-view-btn'>Book Viewing</button>
+          </div>
       </div>
-    </div>
+      </div>
+      <div className="add-info-1">
+        <div className="description">
+          <h3>Description</h3>
+          <p>{home?.property_description}</p>
+        </div>
+        <div className="key-feat">
+          <h3>Key Features</h3>
+          <ul>
+          {
+            keyFeatures.map(item =>{
+              return <li key={item.id} className='list-item'><AiOutlineCheck alt='Checkmark icon'/>{item}</li>
+            })
+          }
+          </ul>
+        </div>
+        <div className="bedroom-prices">
+          <h3>Bedroom Prices</h3>
+          <div className="bedroom-prices-item">
+            {
+              <p>{bedroomPrices}</p>
+            }
+              </div>
+        </div>
+      </div>
     </div>
   )
 }
 
 export default HomeDetailsPage
+
+//I need to either turn the object into an array or something for the bedroom prices

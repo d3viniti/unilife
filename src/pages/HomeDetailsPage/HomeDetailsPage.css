@@ -3,6 +3,59 @@
     flex-direction: column;
 }
 
+.gallery-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-main{
+    display: grid;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    border-radius: 20px;
+
+    width: 620px;
+    height: 596px;
+}
+
+.gallery-other{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:10px;
+    padding:0 10px 0 10px;
+
+    margin-top: 10px;
+}
+
+.gallery-other-item{
+    display:flex;
+    
+    height: 140px;
+    width: 196px;
+    justify-content:flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding:0 0 10px 10px;
+
+    border-radius: 15px;
+}
+
+/* .home-info-btns{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} */
+
 .home-info{
     display: flex;
     flex-direction: column;
@@ -25,6 +78,8 @@
     grid-template-rows: repeat(2, 1fr);
 
     gap: 15px;
+    padding: 30px;
+    border-top: 1px solid #CED3D8;
 }
 
 .grid-child{
@@ -48,9 +103,27 @@
     font-size: 40px;
 }
 
-.text{
+.grid-text{
     font-size: 24px;
 
+}
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+}
+
+.shortlist-btn{
+    display: flex;
+    align-self: center;
+
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #CED3D8;
+}
+
+.book-view-btn{
+    font-size: 20px;
 }
 
 /* ---------------------------------- MOBILE STYLING ------------------------------------- */
@@ -60,5 +133,12 @@
         flex-direction: column;
     }
 
+    .number{
+        font-size: 20px;
+    }
+
+    .grid-text{
+        font-size: 16px;
+    }
 
 }

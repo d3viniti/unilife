@@ -19,7 +19,7 @@ function Homepage({city}) {
   const [options, setOptions] = useState([]);
   const [topCities, setTopCities] = useState([]);
   const [queryCities, setQueryCities] = useState([]);
-  const [selectedCity, setSelectedCity] = useState('');
+  const [cityId, setCityId] = useState('');
 
     //when page loads I need to know how many cities
     useEffect(
@@ -28,7 +28,7 @@ function Homepage({city}) {
         //https://unilife-server.herokuapp.com/cities
         axios.get(`https://unilife-server.herokuapp.com/cities`)
         .then(res=>{
-          // console.log(res.data.response) //log this data to ensure you can access it
+          console.log(res.data.response) //log this data to ensure you can access it
           //need to create an array from one to this value
           setCityData(res.data.response)
             //check in react components to see if it is stored in state, next map!
@@ -52,28 +52,18 @@ function Homepage({city}) {
         .catch(err=>console.log(err))
       }, []
     )
-// where is my student accomodations heading? Also need to retouch footer styling
-
-
-
-//create useEffect to only display 8 cities when screensize is smaller 
-//than 740px
-// useEffect(()=>{
-//   const handleResize = () =>{
-//     console.log(window.innerWidth)
-//     if(window.innerWidth <= 740){
-//       const tempCities = topCities.filter((item, index)=>index<topCities.length-1)
-//       setQueryCities(tempCities)
-//     } else{
-//       setQueryCities(topCities)
-//     }
-//   }
-//   window.addEventListener('resize', handleResize)
-//   return ()=> window.removeEventListener('resize', handleResize)
-// }, [topCities])
-
+      //store data of selected city to put in URL to link
+      //will this function run whenever the event is triggered?
       const handleSelectChange = (e) => {
         console.log('change', e.target.value)
+        setCityId(e.target.value);
+      }
+
+      //I want this func to redirect us to HomeDetailsPage based on the city selected
+      const handleFindProperties = (e) => {
+        console.log('filter', e.target.value)
+        //put link to=...{cityId} when button is clicked
+
       }
 
   return (
@@ -83,10 +73,12 @@ function Homepage({city}) {
         <div className="dropdown">
             <select id='select-city' onChange={handleSelectChange}>
               {
-              cityData.map(city=><option key={city?.id} value={city?.name}>{`${city?.name}`}</option>)
+              cityData.map(city=><option key={city?._id} value={city?._id}>{`${city?.name}`}</option>)
               }
             </select>
-            <button type='submit'>Find Homes</button>
+            <Link to={`/citydetails/${cityId}`}>
+              <button type='submit'>Find Homes</button>
+            </Link>
         </div>
         <h3 className='grid-header'>Student Accomodations in our top cities</h3>
         <div className="top-city-container">
