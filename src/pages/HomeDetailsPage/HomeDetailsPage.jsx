@@ -24,7 +24,6 @@ const {propertyId} = useParams()
   const [otherImages, setOtherImages] = useState([])
   const [mainImage, setMainImage] = useState('')
   const [keyFeatures, setKeyFeatures] = useState([])
-  const [bedroomPrices, setBedroomPrices] = useState({})
 
   //633d45d461f49f86a21caa1a
   useEffect(()=>{
@@ -36,7 +35,7 @@ const {propertyId} = useParams()
       setMainImage(res.data.images[0]);
       setOtherImages(res.data.images.splice(1));
       setKeyFeatures(res.data.key_features)
-      setBedroomPrices(res.data.bedroom_prices)
+      // setBedroomPrices(res.data.bedroom_prices)
     })
       
     .catch(err=>console.log(err))
@@ -131,7 +130,7 @@ const {propertyId} = useParams()
           <h3>Bedroom Prices</h3>
           <div className="bedroom-prices-item">
             {
-              <p>{bedroomPrices}</p>
+              // <p>{home?.bedroom_prices}</p>
             }
               </div>
         </div>
