@@ -1,17 +1,21 @@
 .home-details-container{
     display: flex;
     flex-direction: column;
+
+    margin: 0 40px;
 }
 
 .gallery-info{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 .gallery{
     display: flex;
     flex-direction: column;
+
+    margin-top: 60px;
 }
 
 .gallery-main{
@@ -23,7 +27,7 @@
     border-radius: 20px;
 
     width: 620px;
-    height: 596px;
+    height: 400px;
 }
 
 .gallery-other{
@@ -49,12 +53,15 @@
     border-radius: 15px;
 }
 
-/* .home-info-btns{
+.home-info-btns{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-} */
+    justify-content: center;
+    
+    min-height: 500px;
+    border: 1px solid yellow;
+}
 
 .home-info{
     display: flex;
@@ -63,6 +70,9 @@
     align-items: center;
     border: 1px solid #CED3D8;
     border-radius: 15px;
+
+    width: 40vw;
+    height: 400px;
 }
 
 .address{
@@ -70,6 +80,8 @@
     take the full length of the container?*/
     text-align: center;
     font-size: 36px;
+
+    margin-top: 25px;
 }
 
 .info-grid{
@@ -77,8 +89,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    gap: 15px;
+    height: 600px;
+    gap: 25px;
     padding: 30px;
+    margin: 20px 0;
     border-top: 1px solid #CED3D8;
 }
 
@@ -111,20 +125,132 @@
 .btn-box{
     display: flex;
     justify-content: center;
+
+    padding: 30px 0;
 }
 
 .shortlist-btn{
     display: flex;
     align-self: center;
+    justify-content: center;
 
+    width: 300px;
     padding: 10px 15px;
     border-radius: 10px;
     border: 1px solid #CED3D8;
+
+    cursor: pointer;
+}
+
+.shortlist-btn p{
+    padding-left: 10px;
 }
 
 .book-view-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
+    width: 300px;
+    border-radius: 12px;
+    margin-left: 10px;
+    background-color: #3A5295;
+    color: white;
+
+    cursor: pointer
 }
+
+/* -------- addInfo Container ------ */
+
+.add-info{
+    display: flex;
+    justify-content: space-evenly;
+
+    min-height: 40vh;
+    margin-top: 60px;
+}
+
+h3{
+    font-size: 36px;
+}
+
+
+.add-info p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.add-info-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 50%;
+
+}
+
+.description p{
+    margin-top: 20px;
+    max-width: 70%;
+}
+
+.key-feat{
+    margin: 40px 0;
+}
+
+ul{
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+li{
+    padding: 10px;
+}
+
+.add-info-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    max-width: 50%;
+}
+
+.bedroom-prices-container{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px;
+    border: 1px solid #CED3D8;
+    margin-top: 20px;
+}
+
+
+.bedroom{
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    border-top: 1px solid #CED3D8;
+    padding: 20px;
+}
+
+.bedroom:nth-child(1){
+    border-top: none;
+}
+
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
+
+@media only screen and (max-width: 750px){
+
+    .add-info{
+       
+        flex-direction: column;
+
+    }
+
+}
+
+
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
 
 /* ---------------------------------- MOBILE STYLING ------------------------------------- */
 @media only screen and (max-width: 500px) {

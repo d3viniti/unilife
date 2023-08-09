@@ -63,76 +63,90 @@ const {propertyId} = useParams()
           <div className="home-info">
             <p className="address">{homeAddress?.street}, {homeAddress?.city}, {homeAddress?.postcode}</p>
             <div className="info-grid">
-        <div className="grid-child">
-          <p className='grid-child-heading'>Bedrooms</p>
-          <div className="grid-child-info">
-            <BiBed alt='bed-icon' />
-            <p className='number'>{home?.bedroom_count}</p>
-          </div>
-        </div>
-        <div className="grid-child">
-          <p className='grid-child-heading'>Bathrooms</p>
-          <div className="grid-child-info">
-            <MdOutlineBathtub alt='bath-icon' />
-            <p className='number'>{home?.bathroom_count}</p>
-          </div>
-        </div>
-        <div className="grid-child">
-          <p className='grid-child-heading'>Property Type</p>
-          <p className="grid-child-info grid-text">{home?.property_type}</p>
-        </div>
-        <div className="grid-child">
-          <p className='grid-child-heading'>Price</p>
-            <div className="grid-child-info">
-              <BiPound alt='british-pound-icon' className='number'/>
-              <p className='number'>{home?.rent}</p>
+              <div className="grid-child">
+                <p className='grid-child-heading'>Bedrooms</p>
+                <div className="grid-child-info">
+                  <BiBed alt='bed-icon' />
+                  <p className='number'>{home?.bedroom_count}</p>
+                </div>
+              </div>
+            <div className="grid-child">
+              <p className='grid-child-heading'>Bathrooms</p>
+              <div className="grid-child-info">
+                <MdOutlineBathtub alt='bath-icon' />
+                <p className='number'>{home?.bathroom_count}</p>
+              </div>
             </div>
-        </div>
-        <div className="grid-child">
-          <p className='grid-child-heading'>Furnished Type</p>
-          <div className="grid-child-info">
-            <p className='grid-text'>{home?.furnished}</p>
-          </div>
-        </div>
-        <div className="grid-child">
-          <p className='grid-child-heading'>Available from</p>
-          <div className="grid-child-info">
-            <p className='grid-text'>{home?.availability}</p>
-          </div>
-        </div>
+            <div className="grid-child">
+              <p className='grid-child-heading'>Property Type</p>
+              <p className="grid-child-info grid-text">{home?.property_type}</p>
             </div>
+            <div className="grid-child">
+              <p className='grid-child-heading'>Price</p>
+              <div className="grid-child-info">
+                <BiPound alt='british-pound-icon' className='number'/>
+                <p className='number'>{home?.rent}</p>
+              </div>
+            </div>
+            <div className="grid-child">
+              <p className='grid-child-heading'>Furnished Type</p>
+              <div className="grid-child-info">
+                <p className='grid-text'>{home?.furnished}</p>
+              </div>
+            </div>
+            <div className="grid-child">
+              <p className='grid-child-heading'>Available from</p>
+              <div className="grid-child-info">
+                <p className='grid-text'>{home?.availability}</p>
+              </div>
+            </div>
+          </div>
           </div>
           <div className="btn-box">
-        <div className='shortlist-btn'>
-          <AiOutlineHeart />
-          <p>Shortlist</p>
-        </div>
-        <button className='book-view-btn'>Book Viewing</button>
+            <div className='shortlist-btn'>
+              <AiOutlineHeart />
+              <p>Shortlist</p>
+            </div>
+          <div className='book-view-btn'>
+            <p>Book Viewing</p>
           </div>
-      </div>
-      </div>
-      <div className="add-info-1">
-        <div className="description">
-          <h3>Description</h3>
-          <p>{home?.property_description}</p>
         </div>
-        <div className="key-feat">
+      </div>
+    </div>
+    <div className="add-info">
+        <div className='add-info-left'>
+          <div className="description">
+            <h3>Description</h3>
+            <p>{home?.property_description}</p>
+          </div>
+          <div className="key-feat">
           <h3>Key Features</h3>
           <ul>
           {
             keyFeatures.map(item =>{
-              return <li key={item.id} className='list-item'><AiOutlineCheck alt='Checkmark icon'/>{item}</li>
+              return <li key={item.id} className='list-item'><AiOutlineCheck alt='Checkmark icon'/>{ item}</li>
             })
           }
           </ul>
+          </div>
         </div>
-        <div className="bedroom-prices">
+        <div className="add-info-right">
+          <div className="bedroom-prices">
           <h3>Bedroom Prices</h3>
-          <div className="bedroom-prices-item">
+          <div className="bedroom-prices-container">
             {
-              // <p>{home?.bedroom_prices}</p>
+              
+              Object.keys(home?.bedroom_prices?? {}).map((item, index)=>{
+                return <div className='bedroom' key={item}>
+                  <h4>Bedroom {index + 1}</h4>
+                  <div className='bedroom-price'>
+                    <p>£{home?.bedroom_prices[item]} per week</p>
+                  </div>
+                </div>  
+                })
             }
               </div>
+          </div>
         </div>
       </div>
     </div>
