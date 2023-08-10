@@ -20,6 +20,10 @@ function CityDetailsPage({property}) {
   //   setCurrentPage('CityDetailsPage');
   // }, []);
 
+//need to create state for selections for the dropdown, link to an
+//event and then do an api call with query
+
+
   //this page for showing the details of a specific city
   const {cityId} = useParams()
   const [properties, setProperties] = useState([])

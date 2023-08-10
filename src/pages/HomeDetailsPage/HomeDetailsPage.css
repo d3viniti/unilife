@@ -3,6 +3,7 @@
     flex-direction: column;
 
     margin: 0 40px;
+    background-color: orange;
 }
 
 .gallery-info{
@@ -241,12 +242,39 @@ li{
 
 @media only screen and (max-width: 750px){
 
+    .home-details-container{
+       width: 100%;
+    }
+    
+    .gallery-info{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-info-btns{
+            
+    }
+
+    .home-info{
+        width: 100%;
+    }
+
     .add-info{
-       
+    
         flex-direction: column;
 
     }
 
+
+    .gallery-main{
+        max-width:620px;
+
+    }
+
+    .gallery-other{
+        max-width: 196px;
+    }
 }
 
 
@@ -267,4 +295,12 @@ li{
         font-size: 16px;
     }
 
+
+    .gallery-main{
+        max-width: 360px;
+    }
+
+    .gallery-other-item{
+        max-width: 114px;
+    }
 }

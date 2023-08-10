@@ -195,7 +195,7 @@ border-radius: 15px 15px 0 0;
         }
 
         .property-card-img{
-            width: 560px;
+            max-width: 560px;
             height: auto;
             }
 
@@ -224,7 +224,7 @@ border-radius: 15px 15px 0 0;
    }
     
 .middle-container-img{
-    max-width: 100%;
+    max-width: 320px;
     padding-left: 0;
 }
 
