@@ -72,7 +72,7 @@ function Homepage({city}) {
       <div className="cities-container">
         <div className="dropdown">
             <select id='select-city' onChange={handleSelectChange}>
-              {
+              <option selected>Choose City</option>{
               cityData.map(city=><option key={city?._id} value={city?._id}>{`${city?.name}`}</option>)
               }
             </select>

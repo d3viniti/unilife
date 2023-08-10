@@ -32,10 +32,35 @@ function CityDetailsPage({property}) {
   const [studentLife, setStudentLife] = useState('')
 
 
+
+    //{query:{
+
+    //}}
+  //create state for all dropdown options
+  const [selectedBedroomOption, setSelectedBedroomOption] = useState()
+  //what do I want to intialize the above state to?
+  const bedroomOptions = [1, 2, 3, 4, 5, 6]  
+  const [selectedBathroomOption, setSelectedBathroomOption] = useState()
+  const bathroomOptions = [1, 2, 3, 4, 5, 6]  
+  const [selectedPriceOption, setSelectedPriceOption] = useState()
+  const priceOptions = [1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 250000]
+  const [selectedTypeOption, setSelectedTypeOption] = useState()
+  const typeOptions = ['Apartment', 'Detached', 'Semi-Detached']
+
   //useEffect to run anytime there is a change in the dropdowns selected
 useEffect(()=>{
-
-},[])
+  axios.post(`https://unilife-server.herokuapp.com/properties/filter`,{
+    query:{
+      city_id: cityId,
+      bedroom_count: selectedBedroomOption,
+      bathroom_count: selectedBedroomOption,
+      property_type: selectedTypeOption,
+      rent: selectedPriceOption
+    }
+  })
+  .then(res=>setProperties(res.data.response))
+  .catch(err=>console.log(err))
+},[selectedBedroomOption, selectedBathroomOption, selectedPriceOption, selectedTypeOption])
 
 useEffect(()=>{
   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
@@ -92,6 +117,30 @@ useEffect(()=>{
   return (
     <div className='city-details-container'>
       <Slider header={"Search Accomodation"} paragraph={"Whatever you’re after, we can help you find the right student accommodation for you."} />
+      <select onChange={(e)=>setSelectedBedroomOption(e.target.value)}>
+        <option value=''>Any Bedroom</option>
+        {
+          bedroomOptions.map((item)=><option key={item} value={item}>{item}</option>)
+        }
+      </select>
+      <select onChange={(e)=>setSelectedBathroomOption(e.target.value)}>
+        <option>Any Bathroom</option>
+        {
+          bathroomOptions.map((item)=><option key={item} value={item}>{item}</option>)
+        }
+      </select>
+      <select onChange={(e)=>setSelectedPriceOption(e.target.value)}>
+        <option>Any Price</option>
+        {
+          priceOptions.map((item)=><option key={item} value={item}>{item === 250000 ? '5,000+' : `Less than $${item}` }</option>)
+        }
+      </select>
+      <select onChange={(e)=>setSelectedTypeOption(e.target.value)}>
+        <option>Any Type</option>
+        {
+          typeOptions.map((item)=><option key={item} value={item}>{item}</option>)
+        }
+      </select>
       <h3 className='property-container-header'>{properties.length} homes in {cityName}</h3>
       <div className='properties-container'>
       {

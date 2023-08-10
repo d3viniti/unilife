@@ -33,7 +33,7 @@ const {propertyId} = useParams()
       setHome(res.data)
       setHomeAddress(res.data.address);
       setMainImage(res.data.images[0]);
-      setOtherImages(res.data.images.splice(1));
+      setOtherImages(res.data.images);
       setKeyFeatures(res.data.key_features)
       // setBedroomPrices(res.data.bedroom_prices)
     })
@@ -51,7 +51,7 @@ const {propertyId} = useParams()
         <div className="gallery-other">
           {
             otherImages.map(item => {
-            return <div className='gallery-other-item' key={item?.id}
+            return <div onClick={()=>setMainImage(item)} className='gallery-other-item' key={item?.id}
             style={{backgroundImage: `url(${item})`}}>
                     </div>
              } )

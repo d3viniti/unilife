@@ -27,7 +27,8 @@
 select{
     border: none;
     border-radius: 5px;
-    padding: 5px 200px;
+    display: block;
+    width: 80%;
 }
 
 button{
@@ -57,10 +58,6 @@ button{
     position: absolute;
     top: 35vh;
     left: 20%;
-}
-
-select{
-    max-width: 100px;
 }
 
     /* ----------- grid ------------- */
