@@ -80,14 +80,74 @@
     }
   }
   
-  .button {
-    height: 4rem;
-    width: 10rem;
-    font-size: 0.8rem;
-    font-weight: 700;
-    background-color: skyblue;
-    color: #eee;
-    padding: 1rem 2rem;
-    border-radius: 10px;
+  .text-icon{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 10px 0 10px;
+    margin-top: 10px;
+  }
+
+  .icon{
+    width: 88px;
+    color: #3A5295;
+  }
+
+  h2{
+    font-size: 36px;
+
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .form{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-left{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  textarea{
     border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .open-modal-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 12px 10px;
+    width: 400px;
+    border-radius: 12px;
+    background-color: #3A5295;
+    color: white;
+
+    cursor: pointer
+    }
+  
+
+  .modal-input{
+    width: 250px;
+    margin-top: 0;
+  }
+
+  .modal-label{
+    margin-top: 15px;
   }

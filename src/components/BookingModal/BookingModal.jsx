@@ -1,7 +1,8 @@
 import './BookingModal.css'
 import { useState } from "react";
-import Modal from "./Modal";
-import ModalPortal from "./ModalPortal";
+import Modal from "../Modal/BModal";
+import ModalPortal from "../ModalPortal/ModalPortal";
+import './BookingModal.css'
 import { CSSTransition } from "react-transition-group";
 
 const BookingModal = () => {
@@ -12,10 +13,9 @@ const BookingModal = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Modal with Backdrop sample</h1>
-      <button className="button" onClick={() => setShowModal(true)}>
-        Show Modal
+    <div className="modal-container">
+      <button className="open-modal-button" onClick={() => setShowModal(true)}>
+        Book Viewing
       </button>
       <ModalPortal show={showModal} onClick={onClickHandler}>
         <CSSTransition

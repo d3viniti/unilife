@@ -7,7 +7,32 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { BiPound } from "react-icons/bi";
 import { AiOutlineHeart } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
-import Modal from 'react-modal'
+import BookingModal from '../../components/BookingModal/BookingModal';
+
+// import Modal from 'react-modal'
+
+{/* <Modal
+isOpen={isOpen}
+onRequestClose={()=>setIsOpen(false)}
+style={customStyles}
+contentLabel="Book a Viewing"
+>
+{/* <button onClick={closeModal}>close</button> */}
+{/* <div className="modal-content">
+  <p>{home?.address}</p>
+  <form>
+    <label htmlFor='name'>Name</label>
+    <input type='text' id='name' placeholder='Enter your name'></input>
+    <label htmlFor='email'>Email</label>
+    <input type='email' id='email' placeholder='Enter your email'></input>
+    <label htmlFor='phone'>Phone Number</label>
+    <input type='number' id='phone' placeholder='Enter your phone number'></input>
+    <label htmlFor='message'>Message</label>
+    <textarea id='message' placeholder='Enter your message'></textarea>
+  </form>
+  <button>Submit</button>
+</div>
+</Modal> */}
 // import BookingModal from '../../components/BookingModal/BookingModal';
 // import Modal from '../../components/Modal/Modal';
 
@@ -41,7 +66,6 @@ const {propertyId} = useParams()
     },
   };
 
-  Modal.setAppElement(document.getElementById('root'));
 
   const onShortlist = false;
   const openModal = () => {
@@ -92,7 +116,6 @@ const {propertyId} = useParams()
                   <p className='number'>{home?.bedroom_count}</p>
                 </div>
               </div>
-              
             <div className="grid-child">
               <p className='grid-child-heading'>Bathrooms</p>
               <div className="grid-child-info">
@@ -125,38 +148,14 @@ const {propertyId} = useParams()
             </div>
           </div>
           </div>
-          <div className="btn-box">
-            <div className='shortlist-btn'>
+            {/* <div className='shortlist-btn'>
               <AiOutlineHeart />
               <p>Shortlist</p>
-            </div>
-          <div onClick={()=>setIsOpen(true)} className='book-view-btn'>
-            <p>Book Viewing</p>
-          </div>
-          <Modal
-        isOpen={isOpen}
-        onRequestClose={()=>setIsOpen(false)}
-        style={customStyles}
-        contentLabel="Book a Viewing"
-      >
-        {/* <button onClick={closeModal}>close</button> */}
-        <div className="modal-content">
-          <p>{home?.address}</p>
-          <form>
-            <label htmlFor='name'>Name</label>
-            <input type='text' id='name' placeholder='Enter your name'></input>
-            <label htmlFor='email'>Email</label>
-            <input type='email' id='email' placeholder='Enter your email'></input>
-            <label htmlFor='phone'>Phone Number</label>
-            <input type='number' id='phone' placeholder='Enter your phone number'></input>
-            <label htmlFor='message'>Message</label>
-            <textarea id='message' placeholder='Enter your message'></textarea>
-          </form>
-          <button>Submit</button>
-        </div>
-        </Modal>
+            </div> */}
+            <BookingModal className='book-view-btn'/>
+
       </div>
-    </div>
+
     </div>
     <div className="add-info">
         <div className='add-info-left'>
@@ -192,10 +191,9 @@ const {propertyId} = useParams()
             }
               </div>
           </div>
+          </div>
         </div>
       </div>
-    
-    </div>
   )}
 
 export default HomeDetailsPage

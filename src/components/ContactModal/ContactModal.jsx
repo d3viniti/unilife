@@ -1,10 +1,11 @@
 import './ContactModal.css'
 import { useState } from "react";
-import Modal from "./Modal";
-import ModalPortal from "./ModalPortal";
+import Modal from "../Modal/CModal";
+import ModalPortal from "../ModalPortal/ModalPortal";
 import { CSSTransition } from "react-transition-group";
+import mail from '../../assets/Vectormail.png'
 
-const SampleComponent = () => {
+const ContactModal = () => {
   const [showModal, setShowModal] = useState(false);
 
   const onClickHandler = () => {
@@ -12,11 +13,11 @@ const SampleComponent = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Modal with Backdrop sample</h1>
-      <button className="button" onClick={() => setShowModal(true)}>
-        Show Modal
-      </button>
+    <div className="modal-container">
+      <div className="open-cmodal-button" onClick={() => setShowModal(true)}>
+      <img src={mail}/>
+        <p>Contact us</p>
+      </div>
       <ModalPortal show={showModal} onClick={onClickHandler}>
         <CSSTransition
           mountOnEnter
@@ -32,4 +33,4 @@ const SampleComponent = () => {
   );
 };
 
-export default SampleComponent;
+export default ContactModal;

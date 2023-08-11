@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import Backdrop from "./Backdrop";
+import Backdrop from "../Backdrop/Backdrop";
 
 const ModalPortal = (props) => {
   return (
