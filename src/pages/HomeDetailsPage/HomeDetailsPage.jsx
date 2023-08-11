@@ -81,6 +81,7 @@ const {propertyId} = useParams()
         </div>
       </div>
       <div className="home-info-btns">
+        
           <div className="home-info">
             <p className="address">{homeAddress?.street}, {homeAddress?.city}, {homeAddress?.postcode}</p>
             <div className="info-grid">
@@ -91,6 +92,7 @@ const {propertyId} = useParams()
                   <p className='number'>{home?.bedroom_count}</p>
                 </div>
               </div>
+              
             <div className="grid-child">
               <p className='grid-child-heading'>Bathrooms</p>
               <div className="grid-child-info">
@@ -155,6 +157,7 @@ const {propertyId} = useParams()
         </Modal>
       </div>
     </div>
+    </div>
     <div className="add-info">
         <div className='add-info-left'>
           <div className="description">
@@ -191,7 +194,7 @@ const {propertyId} = useParams()
           </div>
         </div>
       </div>
-    </div>
+    
     </div>
   )}
 
