@@ -7,7 +7,9 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { BiPound } from "react-icons/bi";
 import { AiOutlineHeart } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
+import Modal from 'react-modal'
 // import BookingModal from '../../components/BookingModal/BookingModal';
+// import Modal from '../../components/Modal/Modal';
 
 function HomeDetailsPage() {
 
@@ -24,6 +26,22 @@ const {propertyId} = useParams()
   const [otherImages, setOtherImages] = useState([])
   const [mainImage, setMainImage] = useState('')
   const [keyFeatures, setKeyFeatures] = useState([])
+
+  const [isOpen, setIsOpen] = useState(false);
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      width: '50vw',
+      height: '60vh'
+    },
+  };
+
+  Modal.setAppElement(document.getElementById('root'));
 
   const onShortlist = false;
   const openModal = () => {
@@ -110,10 +128,31 @@ const {propertyId} = useParams()
               <AiOutlineHeart />
               <p>Shortlist</p>
             </div>
-          <div className='book-view-btn'>
+          <div onClick={()=>setIsOpen(true)} className='book-view-btn'>
             <p>Book Viewing</p>
           </div>
+          <Modal
+        isOpen={isOpen}
+        onRequestClose={()=>setIsOpen(false)}
+        style={customStyles}
+        contentLabel="Book a Viewing"
+      >
+        {/* <button onClick={closeModal}>close</button> */}
+        <div className="modal-content">
+          <p>{home?.address}</p>
+          <form>
+            <label htmlFor='name'>Name</label>
+            <input type='text' id='name' placeholder='Enter your name'></input>
+            <label htmlFor='email'>Email</label>
+            <input type='email' id='email' placeholder='Enter your email'></input>
+            <label htmlFor='phone'>Phone Number</label>
+            <input type='number' id='phone' placeholder='Enter your phone number'></input>
+            <label htmlFor='message'>Message</label>
+            <textarea id='message' placeholder='Enter your message'></textarea>
+          </form>
+          <button>Submit</button>
         </div>
+        </Modal>
       </div>
     </div>
     <div className="add-info">
@@ -153,8 +192,8 @@ const {propertyId} = useParams()
         </div>
       </div>
     </div>
-  )
-}
+    </div>
+  )}
 
 export default HomeDetailsPage
 
