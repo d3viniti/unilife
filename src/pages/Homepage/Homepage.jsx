@@ -72,7 +72,7 @@ function Homepage({city}) {
       <div className="cities-container">
         <div className="dropdown">
             <select id='select-city' onChange={handleSelectChange}>
-              <option selected>Choose City</option>{
+              <option selected>Select City</option>{
               cityData.map(city=><option key={city?._id} value={city?._id}>{`${city?.name}`}</option>)
               }
             </select>
@@ -133,7 +133,7 @@ function Homepage({city}) {
                   <p>Shortlist your favourite properties and send enquiries in one click.</p>
                 </div>
               </div>
-              <Link to='#' className='btn search-compare-btn'>Search & Compare</Link>
+              <Link to='/SeeAllCities' className='btn search-compare-btn'>Search & Compare</Link>
             </div>
             <img src={textman} className='textman'/>
         </div>

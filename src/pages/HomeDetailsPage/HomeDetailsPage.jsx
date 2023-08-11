@@ -1,4 +1,3 @@
-import React from 'react'
 import './HomeDetailsPage.css'
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -8,6 +7,7 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { BiPound } from "react-icons/bi";
 import { AiOutlineHeart } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
+import BookingModal from '../../components/BookingModal/BookingModal';
 
 function HomeDetailsPage() {
 
@@ -25,17 +25,20 @@ const {propertyId} = useParams()
   const [mainImage, setMainImage] = useState('')
   const [keyFeatures, setKeyFeatures] = useState([])
 
+  const onShortlist = false;
+  const openModal = () => {
+    
+  }
+
   //633d45d461f49f86a21caa1a
   useEffect(()=>{
     axios.get(`https://unilife-server.herokuapp.com/properties/${propertyId}`)
     .then(res=>{
-      console.log(res.data)
       setHome(res.data)
       setHomeAddress(res.data.address);
       setMainImage(res.data.images[0]);
       setOtherImages(res.data.images);
       setKeyFeatures(res.data.key_features)
-      // setBedroomPrices(res.data.bedroom_prices)
     })
       
     .catch(err=>console.log(err))
@@ -66,14 +69,14 @@ const {propertyId} = useParams()
               <div className="grid-child">
                 <p className='grid-child-heading'>Bedrooms</p>
                 <div className="grid-child-info">
-                  <BiBed alt='bed-icon' />
+                  <BiBed alt='bed-icon' className='icon'/>
                   <p className='number'>{home?.bedroom_count}</p>
                 </div>
               </div>
             <div className="grid-child">
               <p className='grid-child-heading'>Bathrooms</p>
               <div className="grid-child-info">
-                <MdOutlineBathtub alt='bath-icon' />
+                <MdOutlineBathtub alt='bath-icon' className='icon'/>
                 <p className='number'>{home?.bathroom_count}</p>
               </div>
             </div>
@@ -124,7 +127,7 @@ const {propertyId} = useParams()
           <ul>
           {
             keyFeatures.map(item =>{
-              return <li key={item.id} className='list-item'><AiOutlineCheck alt='Checkmark icon'/>{ item}</li>
+              return <li key={item.id} className='list-item'><AiOutlineCheck alt='Checkmark icon'/> {item}</li>
             })
           }
           </ul>

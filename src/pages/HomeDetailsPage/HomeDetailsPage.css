@@ -3,13 +3,14 @@
     flex-direction: column;
 
     margin: 0 40px;
-    background-color: orange;
 }
 
 .gallery-info{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+
+
 }
 
 .gallery{
@@ -32,15 +33,18 @@
 }
 
 .gallery-other{
-    display: flex;
-    padding:0 10px 0 10px;
-
     margin-top: 10px;
+     display: grid;
+     gap: 10px;
+     grid-template-columns: repeat(4, 1fr);
+     width: 620px;
+     overflow: scroll;
+     grid-template-rows: auto;
 }
 
 .gallery-other-item{
     height: 140px;
-    width: 300px;
+    width: 200px;
     justify-content:flex-end;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,10 +58,10 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     
-    min-height: 500px;
-    border: 1px solid yellow;
+    min-height: 600px;
 }
 
 .home-info{
@@ -68,8 +72,9 @@
     border: 1px solid #CED3D8;
     border-radius: 15px;
 
-    width: 40vw;
+    width: 35vw;
     height: 400px;
+    margin-top: 60px;
 }
 
 .address{
@@ -79,6 +84,7 @@
     font-size: 36px;
 
     margin-top: 25px;
+    border-bottom: 1px solid #CED3D8;
 }
 
 .info-grid{
@@ -88,19 +94,16 @@
 
     height: 600px;
     gap: 25px;
-    padding: 30px;
+    padding: 14px;
     margin: 20px 0;
-    border-top: 1px solid #CED3D8;
+    /* border-top: 1px solid #CED3D8; */
 }
 
 .grid-child{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-
-    background-color: pink;
-    
 }
 
 .grid-child-info{
@@ -108,6 +111,15 @@
     justify-content: space-evenly;
     color: #3A5295;
 
+}
+
+.grid-child-info p{
+    font-weight: 700;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
 }
 
 .number{
@@ -123,7 +135,6 @@
     display: flex;
     justify-content: center;
 
-    padding: 30px 0;
 }
 
 .shortlist-btn{
@@ -131,7 +142,7 @@
     align-self: center;
     justify-content: center;
 
-    width: 300px;
+    width: 200px;
     padding: 10px 15px;
     border-radius: 10px;
     border: 1px solid #CED3D8;
@@ -148,7 +159,7 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
-    width: 300px;
+    width: 200px;
     border-radius: 12px;
     margin-left: 10px;
     background-color: #3A5295;
@@ -233,6 +244,73 @@ li{
 .bedroom:nth-child(1){
     border-top: none;
 }
+
+
+/* ---------- grid-break styling ------------ */
+@media only screen and (max-width: 1315px){
+
+    .home-details-container{
+        margin: 0 10px;
+    }
+
+    /* .gallery-info{
+        flex-direction: column;
+    } */
+
+    .info-grid{
+        gap: 8px;
+    }
+
+    .home-info{
+        width: 70vw;
+    }
+
+    .grid-text{
+        font-size: 24px;
+    }
+
+    .shortlist-btn{
+        width: 300px;
+    }
+
+    .book-view-btn{
+        width: 300px;
+    }
+    /* .icon{
+        width: 25px;
+        height: 25px;
+    } */
+
+}
+
+/* ---------- grid-break styling ------------ */
+@media only screen and (max-width: 1315px){
+    .gallery-info{
+        flex-direction: column;
+    }
+
+    .info-grid{
+        gap: 20px;
+    }
+
+    .add-info{
+        justify-content: center;
+    }
+    .description{
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+    ;
+    }
+
+    .add-info-left{
+        align-items: center;
+        justify-content: center;
+        justify-self: center;
+        align-self: center;
+    }
+}
+/* ---------- grid-break styling ------------ */
 
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 

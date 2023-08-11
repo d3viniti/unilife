@@ -1,6 +1,43 @@
 .city-details-container{
     min-height: 100vh;
+    position: relative;
 }
+
+.page-container{
+    position: relative;
+}
+
+.select-container{
+    position: absolute;
+    top: -200px;
+    left: 10%;
+    display: flex;
+    justify-content: space-between;
+
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 20px;
+
+    background-color: white;
+    box-shadow: 0px 4px 20px 0px #00000014;
+    border-radius: 20px;
+}
+
+.selector{
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    width: 266px;
+    padding: 10px;
+    color:#CED3D8;
+    border: 1px solid #CED3D8;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+    
+    /* --------- property container & cards --------- */
 
 .property-container-header{
     margin-top: 5vh;
@@ -8,6 +45,8 @@
     text-align: left;
     font-size: 2.25rem;
     font-weight: 500;
+
+    margin-top: 125px;
 }
 
 .properties-container{
@@ -144,11 +183,13 @@ border-radius: 15px 15px 0 0;
     padding-left: 10px;
 }
 
+    /* --------- property container & cards --------- */
+
     /* --------------- middle container ------- */
 
     .middle-container{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
 
         border-radius: 15px;
         width: 85vw;
@@ -157,6 +198,9 @@ border-radius: 15px 15px 0 0;
         background-color: #F6FAFD;        
     }
 
+    .middle-container-text{
+        align-self:center;
+    }
 
     .middle-container-header{
         font-size: 36px;
@@ -187,7 +231,26 @@ border-radius: 15px 15px 0 0;
 
 }
 
+/* ---------------------------------- TABLET STYLING ------------------------------------- */
+@media only screen and (max-width: 1401px) {
+
+    .select-container{
+        width: 80%;
+        height: auto;
+        /* left: 110px; */
+        }
+
+        
+        select{
+            max-width: 200px;
+        }
+}
+
 @media only screen and (max-width: 1140px) {
+
+    select{
+        max-width: 150px;
+    }
 
     .middle-container{
         flex-direction: column;
@@ -209,14 +272,42 @@ border-radius: 15px 15px 0 0;
         display: grid;
         gap: 1rem;
         grid-template-columns: repeat(2, 1fr);
-        
+
     
     }
-}
+
+    .select-container{
+        width: 700px;
+        /* left: 100px; */
+
+        justify-items: center;
+        padding: 40px 20px;
+    }
+
+    
 
         /* ----------------- grid break --------------- */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 870px) {
+
+    .select-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 30px;
+        padding-bottom: 40px;
+       width:500px;
+       /* left: 180px; */
+        
+    }
+
+    .selector{
+        padding-top: 10px;
+    }
+
+
+    .property-container-header{
+        margin-top: 22vh;
+    }
 
    .middle-container{
     flex-direction: column;
@@ -224,14 +315,70 @@ border-radius: 15px 15px 0 0;
    }
     
 .middle-container-img{
-    max-width: 320px;
+    max-width: 560px;
     padding-left: 0;
 }
 
 }
 
+        /* ----------------- grid break --------------- */
+
+        @media only screen and (max-width: 830px) {
+
+            .select-container{
+                /* left: 150px; */
+            }
+
+            .middle-container-img{
+                width: 500px;
+            }
+        }
+
+
+        /* ----------------- grid break --------------- */
+
+        @media only screen and (max-width: 730px) {
+
+            .select-container{
+                /* left: 110px; */
+            }
+        }
+
+        /* ----------------- grid break --------------- */
+
+        @media only screen and (max-width: 680px) {
+
+            .select-container{
+                /* left: 90px; */
+            }
+
+            .middle-container-img{
+                width: 400px;
+            }
+        }
+
+
 /* ---------------------------------- MOBILE STYLING ------------------------------------- */
 @media only screen and (max-width: 650px) {
+
+    .select-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    
+        width: 390px;
+        /* left: 133px; */
+
+        padding: 20px 0;
+    }
+
+    select{
+        width: 333px;
+    }
+
+    .property-container-header{
+        margin-top: 39vh;
+    }
+
 
     .properties-container{
         display: grid;
@@ -250,3 +397,15 @@ border-radius: 15px 15px 0 0;
 
 
 }
+    /* ----------------- grid break --------------- */
+
+    @media only screen and (max-width: 530px) {
+
+        .select-container{
+            /* left: 90px; */
+        }
+
+        .middle-container-img{
+            width: 300px;
+        }
+    }

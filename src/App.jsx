@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
@@ -7,6 +6,14 @@ import CityDetailsPage from './pages/CityDetailsPage/CityDetailsPage';
 import HomeDetailsPage from './pages/HomeDetailsPage/HomeDetailsPage';
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage/SeeAllCitiesPage';
 import Footer from './components/Footer/Footer'
+import {useState, createContext, useEffect} from 'react'
+import ShortlistContextProvider from './contexts/ShortlistContext'
+
+// export const FavoritesContext = createContext();
+
+// export default function FavoritesContextProvider(props){
+//     //create my global state
+//     const [favorites, setFavorites] = useState([])
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +26,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ShortlistContextProvider>
       <Header /> 
       <Routes>
         <Route path='/' element={<Homepage currentPage={currentPage} baseUrl={baseUrl}/>} /> 
@@ -28,8 +36,8 @@ function App() {
        
       </Routes>
       <Footer />
+      </ShortlistContextProvider>
     </BrowserRouter>
   )
-}
-
+  }
 export default App

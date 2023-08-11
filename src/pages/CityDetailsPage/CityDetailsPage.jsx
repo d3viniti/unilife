@@ -12,11 +12,11 @@ import midImg from '../../assets/city-details-img.png'
 
 
 
-
 function CityDetailsPage({property}) {
   
     //imported useEffect and slider components, setting current page w state
-  // useEffect(()=>{
+  // uimport BookingModal from '../../components/BookingModal/BookingModal';
+//useEffect(()=>{
   //   setCurrentPage('CityDetailsPage');
   // }, []);
 
@@ -65,8 +65,6 @@ useEffect(()=>{
 useEffect(()=>{
   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
   .then(res=> {
-    console.log(res.data)
-    console.log(res.data.city_name)
     setCityName(res.data.city_name)
   }
     )
@@ -78,7 +76,6 @@ useEffect(()=>{
     //store data in state
     axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
     .then(res=>{
-      console.log(res.data)
       setProperties(res.data.response)
     })
     .catch(err=>console.log(err))
@@ -89,8 +86,6 @@ useEffect(()=>{
     axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
     .then(res=>{
       for(let i=0; i < res.data.response.length; i++){
-      console.log(res.data.response[i].images)
-      console.log(res.data.response)
       setPropertyImages(res.data.response[i].images)
       }
       //store data
@@ -117,30 +112,45 @@ useEffect(()=>{
   return (
     <div className='city-details-container'>
       <Slider header={"Search Accomodation"} paragraph={"Whatever you’re after, we can help you find the right student accommodation for you."} />
-      <select onChange={(e)=>setSelectedBedroomOption(e.target.value)}>
+      <div className="page-container">
+      <div className='select-container'>
+        <div className="selector">
+        <label htmlFor="bedroom">Min Bedroom</label>
+      <select id='bedroom' onChange={(e)=>setSelectedBedroomOption(e.target.value)}>
         <option value=''>Any Bedroom</option>
         {
           bedroomOptions.map((item)=><option key={item} value={item}>{item}</option>)
         }
       </select>
-      <select onChange={(e)=>setSelectedBathroomOption(e.target.value)}>
+      </div>
+      <div className="selector">
+      <label htmlFor="bathroom">Min Bathroom</label>
+      <select id='bathroom' onChange={(e)=>setSelectedBathroomOption(e.target.value)}>
         <option>Any Bathroom</option>
         {
           bathroomOptions.map((item)=><option key={item} value={item}>{item}</option>)
         }
       </select>
-      <select onChange={(e)=>setSelectedPriceOption(e.target.value)}>
+      </div>
+      <div className="selector">
+      <label htmlFor="price">Max Price</label>
+      <select id='price' onChange={(e)=>setSelectedPriceOption(e.target.value)}>
         <option>Any Price</option>
         {
           priceOptions.map((item)=><option key={item} value={item}>{item === 250000 ? '5,000+' : `Less than $${item}` }</option>)
         }
       </select>
-      <select onChange={(e)=>setSelectedTypeOption(e.target.value)}>
+      </div>
+      <div className="selector">
+      <label htmlFor="type">Home Type</label>
+      <select value='type' onChange={(e)=>setSelectedTypeOption(e.target.value)}>
         <option>Any Type</option>
         {
           typeOptions.map((item)=><option key={item} value={item}>{item}</option>)
         }
       </select>
+      </div>
+      </div>
       <h3 className='property-container-header'>{properties.length} homes in {cityName}</h3>
       <div className='properties-container'>
       {
@@ -180,6 +190,7 @@ useEffect(()=>{
   }
 
       </div>
+      </div>
       <div className="middle-container">
         <div className="middle-container-text">
           <h3 className='middle-container-header'>Being a student in {cityName}</h3>
@@ -191,8 +202,4 @@ useEffect(()=>{
     </div>
   )
 }
-
-
-//how can I add just the first img of each objects' imgs to my state and map them to their respective card?
-export default CityDetailsPage
-
+export default CityDetailsPage;
