@@ -15,9 +15,18 @@ function Footer() {
          <div className="social">
           <h3>Let's Socialize</h3>
           <div className="socials">
-              <a><BsFacebook/> Facebook</a>
-              <a><BsInstagram/> Instagram</a>
-              <a><BsTwitter/> Twitter</a>
+            <a href='facebook.com' className="social-link">
+              <BsFacebook />
+              <p>Facebook</p>
+            </a>
+            <a href="instagram.com" className="social-link">
+              <BsInstagram/>
+              <p>Instagram</p>
+            </a>
+            <a href="twitter.com" className="social-link">
+              <BsTwitter/>
+              <p>Twitter</p>
+            </a>
           </div>
         </div>
       </div>  

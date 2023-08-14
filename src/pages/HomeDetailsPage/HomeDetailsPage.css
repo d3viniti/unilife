@@ -128,6 +128,7 @@
 
 .grid-text{
     font-size: 24px;
+    font-weight: 700;
 
 }
 
@@ -190,12 +191,12 @@ h3{
 
 .description h3{
     margin: 0 auto;
-    max-width: 70%;
+    max-width: 620px;
 }
 
 .description p{
     margin: 20px auto;
-    max-width: 70%;
+    max-width: 620px;
 }
 
 .key-feat{
@@ -292,20 +293,35 @@ li{
 
     .add-info{
         justify-content: center;
+        flex-direction: column;
+        width: 90vw;
     }
+
     .description{
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         align-self: center;
     ;
     }
 
     .add-info-left{
-        align-items: center;
         justify-content: center;
         justify-self: center;
-        align-self: center;
+        
+        margin-left: 20vw;
+        margin-right: auto;
     }
+
+    .add-info-right{
+        justify-content: center;
+        justify-self: center;
+        
+        margin-left: 20vw;
+        margin-right: auto;
+        margin-bottom: 10vh;
+    }
+
+
 }
 /* ---------- grid-break styling ------------ */
 
@@ -323,8 +339,23 @@ li{
         align-items: center;
     }
 
-    .home-info-btns{
-            
+    .gallery{
+        /* height: 600px; */
+    }
+
+    .gallery-main{
+        width: 496px;
+        height: 320px;
+    }
+
+    .gallery-other{
+        width: 496px;
+        overflow: scroll;
+    }
+
+    .gallery-other-item{
+        width: 196px;
+        height: 112px;
     }
 
     .home-info{
@@ -337,17 +368,29 @@ li{
 
     }
 
-
-    .gallery-main{
-        max-width:620px;
-
+    .address{
+        font-size: 24px;
     }
 
-    .gallery-other{
-        max-width: 196px;
+    .grid-child-heading{
+        font-size: 16px;
+    }
+
+    .grid-text{
+        font-size: 16px;
+    }
+
+    .icon{
+        width: 40px;
+        height: 40px;
+
+        color: pink;
+    }
+
+    .number{
+        font-size: 20px;
     }
 }
-
 
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 
@@ -368,10 +411,18 @@ li{
 
 
     .gallery-main{
-        max-width: 360px;
+        width: 360px;
+        height: 232px;
+        border: solid 10px yellow;
+    }
+
+    .gallery-other{
+        width: 360px;
+        overflow: scroll;
     }
 
     .gallery-other-item{
-        max-width: 114px;
+        width: 114px;
+        height: 81.3px;
     }
 }

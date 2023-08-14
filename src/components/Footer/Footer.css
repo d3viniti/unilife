@@ -63,6 +63,17 @@ input{
     font-size: 20px;
 }
 
+.social-link{
+    text-decoration: none;
+    color: white;
+
+    display: flex;
+}
+
+.social-link p{
+    padding: 5px;
+}
+
 .black-block{
     display: flex;
     justify-content: space-between;
