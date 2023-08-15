@@ -301,7 +301,7 @@ li{
         align-items: flex-start;
         justify-content: center;
         align-self: center;
-    ;
+    
     }
 
     .add-info-left{
@@ -339,9 +339,7 @@ li{
         align-items: center;
     }
 
-    .gallery{
-        /* height: 600px; */
-    }
+ 
 
     .gallery-main{
         width: 496px;
@@ -389,6 +387,10 @@ li{
 
     .number{
         font-size: 20px;
+    }
+
+    .bedroom{
+        width: 350px;
     }
 }
 
