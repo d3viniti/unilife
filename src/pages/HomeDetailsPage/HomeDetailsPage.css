@@ -279,10 +279,6 @@ li{
         height: 25px;
     } */
 
-}
-
-/* ---------- grid-break styling ------------ */
-@media only screen and (max-width: 1315px){
     .gallery-info{
         flex-direction: column;
     }
@@ -361,9 +357,15 @@ li{
     }
 
     .add-info{
-    
+        justify-content: center;
+        align-items: center;
+
         flex-direction: column;
 
+    }
+
+    .add-info-right{
+        margin: 7% auto;
     }
 
     .address{
@@ -403,6 +405,11 @@ li{
         flex-direction: column;
     }
 
+    .home-info{
+        width: 85%;
+        margin-top: 5%;
+    }
+
     .number{
         font-size: 20px;
     }
@@ -426,5 +433,14 @@ li{
     .gallery-other-item{
         width: 114px;
         height: 81.3px;
+    }
+
+    .modal-container{
+        margin-top: -10%;
+        width: 85%;
+    }
+
+    .bedroom{
+        width: 300px;
     }
 }
