@@ -243,10 +243,10 @@ border-radius: 15px 15px 0 0;
         
         select{
             max-width: 200px;
-        }
+        } 
 }
 
-@media only screen and (max-width: 1140px) {
+@media only screen and (max-width: 1170px) {
 
     select{
         max-width: 150px;
@@ -276,29 +276,24 @@ border-radius: 15px 15px 0 0;
     
     }
 
-    .select-container{
-        width: 700px;
-        /* left: 100px; */
-
-        justify-items: center;
-        padding: 40px 20px;
-    }
-
 }
 
         /* ----------------- grid break --------------- */
 
-@media only screen and (max-width: 870px) {
+@media only screen and (max-width: 850px) {
 
     .select-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 20px 30px;
-        padding-bottom: 40px;
-       width:500px;
-       /* left: 180px; */
-        
+        padding: 20px;
+        padding-bottom: 30px;
+        width:500px; 
+        left: 15%;
+        top: -288px;
+
+        justify-items: center;
     }
+    
 
     .selector{
         padding-top: 10px;
@@ -334,23 +329,9 @@ border-radius: 15px 15px 0 0;
             }
         }
 
-
-        /* ----------------- grid break --------------- */
-
-        @media only screen and (max-width: 730px) {
-
-            .select-container{
-                /* left: 110px; */
-            }
-        }
-
-        /* ----------------- grid break --------------- */
+    
 
         @media only screen and (max-width: 680px) {
-
-            .select-container{
-                /* left: 90px; */
-            }
 
             .middle-container-img{
                 width: 400px;
@@ -359,20 +340,29 @@ border-radius: 15px 15px 0 0;
 
 
 /* ---------------------------------- MOBILE STYLING ------------------------------------- */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 666px) {
 
     .select-container{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     
-        width: 390px;
-        /* left: 133px; */
+        width: 80%;
+        top: -433px;
+        left: 11%;
+    
 
-        padding: 20px 0;
+        padding: 10px 0;
+        padding-bottom: 20px;
+    }
+
+    .selector{
+        max-width: 90vw;
+     
     }
 
     select{
-        width: 333px;
+        max-width: 90vw;
+        
     }
 
     .property-container-header{
@@ -399,10 +389,11 @@ border-radius: 15px 15px 0 0;
 }
     /* ----------------- grid break --------------- */
 
-    @media only screen and (max-width: 530px) {
+    @media only screen and (max-width: 450px) {
 
         .select-container{
             /* left: 90px; */
+            top: -400px;
         }
 
         .middle-container-img{
