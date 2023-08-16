@@ -359,13 +359,16 @@ li{
     .add-info{
         justify-content: center;
         align-items: center;
-
         flex-direction: column;
 
     }
 
     .add-info-right{
-        margin: 7% auto;
+        margin: 0 auto 10% auto;
+    }
+
+    .add-info-left{
+        margin: 0 auto;
     }
 
     .address{
@@ -383,8 +386,6 @@ li{
     .icon{
         width: 40px;
         height: 40px;
-
-        color: pink;
     }
 
     .number{
@@ -422,7 +423,6 @@ li{
     .gallery-main{
         width: 360px;
         height: 232px;
-        border: solid 10px yellow;
     }
 
     .gallery-other{
