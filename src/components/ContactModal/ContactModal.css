@@ -39,8 +39,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50vw;
-    height: 70vh;
-    background-color: #e5e5e5;
+    height: 50vh;
+    background-color:#e5e5e5;
     border-radius: 10px;
   
     display: flex;
@@ -152,44 +152,53 @@
 }
 
   .modal-input{
-    width: 250px;
-    margin-top: 0;
+    width: 100%;
+    margin-top: 10px;
   }
 
   .modal-label{
     margin-top: 15px;
   }
 
+  select{
+    width: 100%;
+  }
+
   @media only screen and (max-width: 1365px) {
 
     .modal-input{
-      width: 150px;
+      width: 100%;
+      
     }
 
     input{
       max-width: 75%;
+  
     }
 
-    textarea{
-      max-width: 75%;
+   .form-right{
+      max-width: 100%;
+  
     }
 
   }
 
   @media only screen and (max-width: 1130px) {
 
-    .modal{
-      max-height: 80vh;
+    .modal-enter-done{
+      background-color: #e5e5e5;
     }
 
+    
     .form{
       flex-direction: column;
       margin: 0 auto;
+
     }
 
-    .modal-input{
+    /* .modal-input{
       width: 150px;
-    }
+    } */
 
     input{
       max-width: 75%;
@@ -200,6 +209,70 @@
       
     }
 
+    .text-icon{
+      margin-top: 15px;
+     }
+     
+  h2{
+      font-size: 24px;
+      align-self: center;
+  }
+  
+      .modal-input{
+        width: 100%;
+      }
+  
+  
+      .modal{
+          height: 90vh;
+          width: 60vw;
+          padding: 20px 0;
+  
+      }
+  
+      .form{
+        width: 100%;
+        margin: 0 auto;
+
+        align-items: center;
+    
+      }
+
+      .form-left{
+          display: flex;
+          flex-direction: column;
+          /* align-items: center; */
+          width: 100%;
+          margin-left: 20%;
+      }
+  
+      .form-right{
+          display: flex;
+          flex-direction: column;
+          /* align-items: center; */
+  
+          justify-content: center;
+          width: 100%;
+
+          margin-left: 20%;
+          margin-right: 0;
+
+      }
+  
+     select{
+          max-width: 75%;
+      }
+
+      textarea{
+        width: 100%;
+      }
+  
+      .view-btn{
+        align-self: flex-start;
+        width: 75%;
+        margin-left: 0;
+          margin-top: 20px;
+        }
     /* .view-btn{
       margin-bottom: 20px;
     } */

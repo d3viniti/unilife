@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {AiOutlineMail} from 'react-icons/ai'
+// import '../ContactModal/ContactModal.css'
 
 const Modal = (props) => {
 
