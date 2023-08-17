@@ -131,6 +131,8 @@
     margin-top: 5px;
   }
 
+
+
   .open-cmodal-button{
     display: flex;
     justify-content: center;
@@ -141,10 +143,11 @@
     border-radius: 12px;
     color: white;
 
-    cursor: pointer
+    cursor: pointer;
+
     }
   
-    .open-cmodal-button p{
+  .open-cmodal-button p{
         padding-left: 10px;
 }
 
@@ -156,3 +159,48 @@
   .modal-label{
     margin-top: 15px;
   }
+
+  @media only screen and (max-width: 1365px) {
+
+    .modal-input{
+      width: 150px;
+    }
+
+    input{
+      max-width: 75%;
+      background-color: pink;
+    }
+
+    textarea{
+      max-width: 75%;
+    }
+
+  }
+
+  @media only screen and (max-width: 1125px) {
+
+    .modal{
+      max-height: 80vh;
+    }
+
+    .form{
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .modal-input{
+      width: 150px;
+    }
+
+    input{
+      max-width: 75%;
+      background-color: pink;
+    }
+
+    textarea{
+      max-width: 75%;
+    }
+
+  }
+
+  /* media query for modal not working here */

@@ -106,6 +106,10 @@
     align-items: center;
 }
 
+.grid-child-heading{
+    font-weight: 700;
+}
+
 .grid-child-info{
     display: flex;
     justify-content: space-evenly;
@@ -116,6 +120,7 @@
 .grid-child-info p{
     font-weight: 700;
 }
+
 
 .icon{
     width: 40px;
@@ -400,7 +405,7 @@ li{
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 
 /* ---------------------------------- MOBILE STYLING ------------------------------------- */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 515px) {
 
     .home-details-container{
         flex-direction: column;
@@ -436,8 +441,7 @@ li{
     }
 
     .modal-container{
-        margin-top: -10%;
-        width: 85%;
+        max-width: 50%;
     }
 
     .bedroom{

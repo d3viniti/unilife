@@ -71,6 +71,8 @@
     height: 15.6px;
 }
 
+
+
 .white{
     color: white;
 }
@@ -102,3 +104,11 @@
     width: 72px;
 }
 }
+
+/* @media only screen and (max-width: 1365px) {
+
+    .modal-input{
+      width: 150px;
+    }
+
+  } */
