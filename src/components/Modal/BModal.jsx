@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {BsFillHouseAddFill} from 'react-icons/bs'
+import './Cmodal.css'
 
 const Modal = (props) => {
 

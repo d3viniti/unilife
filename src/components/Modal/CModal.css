@@ -1,0 +1,50 @@
+@media only screen and (max-width: 1130px) {
+
+   .text-icon{
+    margin-top: 15px;
+   }
+   
+h2{
+    font-size: 24px;
+    align-self: center;
+}
+
+    .modal-input{
+      width: 80%;
+    }
+
+
+    .modal{
+        height: 90vh;
+        padding: 20px 0;
+
+    }
+
+    .form-left{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+
+        justify-content: center;
+        width: 90%;
+    }
+
+    .form-right{
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+
+        justify-content: center;
+        width: 90%;
+    }
+
+    
+
+   select{
+        max-width: 75%;
+    }
+
+    .view-btn{
+        margin-bottom: 20px;
+      }
+  }

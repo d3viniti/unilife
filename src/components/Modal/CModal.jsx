@@ -27,7 +27,7 @@ const Modal = (props) => {
         
           <label htmlFor="message">Message</label>
           <textarea cols='35' rows='15' id="message" placeholder="Enter you message"></textarea>
-          <button className="view-button" onClick={props.onClick}>Submit</button>
+          <button className="view-btn" onClick={props.onClick}>Submit</button>
         </div>
        
       </div>

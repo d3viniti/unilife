@@ -168,7 +168,6 @@
 
     input{
       max-width: 75%;
-      background-color: pink;
     }
 
     textarea{
@@ -177,7 +176,7 @@
 
   }
 
-  @media only screen and (max-width: 1125px) {
+  @media only screen and (max-width: 1130px) {
 
     .modal{
       max-height: 80vh;
@@ -194,13 +193,17 @@
 
     input{
       max-width: 75%;
-      background-color: pink;
     }
 
     textarea{
       max-width: 75%;
+      
     }
 
-  }
+    /* .view-btn{
+      margin-bottom: 20px;
+    } */
+
+  } 
 
   /* media query for modal not working here */
