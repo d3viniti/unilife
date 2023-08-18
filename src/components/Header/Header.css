@@ -124,10 +124,6 @@ textarea{
 
 
 
-
-
-
-
 /* --- modal --- */
 
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
@@ -152,5 +148,19 @@ textarea{
 .unilife{
     width: 72px;
 }
+
+/* --- modal --- */
+
+form{
+    flex-direction: column;
+}
+
+.form-right{
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+/* --- modal --- */
+
 }
 
