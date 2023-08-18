@@ -160,8 +160,15 @@
     padding-left: 10px;
 }
 
-.modal-container{
-    width: 100%;
+.view-home-btn{
+    background-color: #3A5295;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 15px;
+
+    width: 50%;
+    align-items: center;
+    text-align: center;
 }
 
 

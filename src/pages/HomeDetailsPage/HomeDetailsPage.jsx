@@ -5,8 +5,9 @@ import axios from 'axios';
 import { BiBed } from "react-icons/bi";
 import { MdOutlineBathtub } from "react-icons/md";
 import { BiPound } from "react-icons/bi";
-import { AiOutlineHeart } from 'react-icons/ai'
+import { MdAddHomeWork } from 'react-icons/md'
 import { AiOutlineCheck } from 'react-icons/ai'
+import Modal from 'react-modal'
 
 
 // import Modal from 'react-modal'
@@ -61,16 +62,18 @@ const {propertyId} = useParams()
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      width: '50vw',
-      height: '60vh'
+      borderRadius: '15px'
     },
   };
 
+// Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+Modal.setAppElement(document.getElementById('root'));
+//'root' above references the root element, for screen read accessibility
 
-  const onShortlist = false;
-  const openModal = () => {
+  // const onShortlist = false;
+  // const openModal = () => {
     
-  }
+  // }
 
   //633d45d461f49f86a21caa1a
   useEffect(()=>{
@@ -152,7 +155,47 @@ const {propertyId} = useParams()
               <AiOutlineHeart />
               <p>Shortlist</p>
             </div> */}
-            <BookingModal className='book-view-btn'/>
+           <div className="view-home-btn"
+            onClick={()=>setIsOpen(true)}>
+              View Home
+           </div>
+           <Modal
+            isOpen={isOpen}
+            //input state above
+            style={customStyles}
+            //object on top of doc controls this modal's styling
+            onRequestClose={()=>setIsOpen(false)}
+        // onRequestClose={closeModal} - can close modal by clicking outside of
+        contentLabel="View Home Modal"
+      >
+        <div className="text-icon">
+
+          <h2>Book a Viewing</h2> 
+            <MdAddHomeWork className="icon"/>
+        </div>
+        <form className="form">
+            <div className="form-left">
+                <label className='modal-label' htmlFor="name">Name</label>
+                <input className="modal-input" required type="text" placeholder="Enter your name" id="name"></input>
+                <label className='modal-label' htmlFor="phone" required>Phone Number</label>
+                <input className="modal-input" type="number" placeholder="Enter your phone number" id="phone"></input>
+                <label className='modal-label' htmlFor="modal-dropdown">Are you a...</label>
+                <select id='modal-dropdrown'>
+                    <option>Student</option>
+                    <option>Parent</option>
+                </select>
+                <label className='modal-label' htmlFor="email" required>Email</label>
+                <input className="modal-input" type="email" placeholder="Enter your email address" id="email"></input>
+            </div>
+            <div className="form-right">
+                <label htmlFor="message">Message</label>
+                <textarea cols='35' rows='15' id="message" placeholder="Enter you message"></textarea>
+            <button className="view-btn" onClick={()=>setIsOpen(false)}>Submit</button>
+            </div>
+        </form>
+
+        </Modal>
+
 
       </div>
 

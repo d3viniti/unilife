@@ -56,6 +56,10 @@ Modal.setAppElement(document.getElementById('root'));
           <h2>Contact Us</h2> 
             <AiOutlineMail className="icon"/>
         </div>
+        <div className="p">
+          <p>Feel free to contact us if you have any questions.</p>
+          <p>Looking forward to hearing from you!</p>
+        </div>
         <form className="form">
             <div className="form-left">
                 <label className='modal-label' htmlFor="name">Name</label>
