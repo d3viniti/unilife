@@ -25,8 +25,7 @@
 select{
     border: none;
     border-radius: 5px;
-    /* display: block; */
-    width: 555px;
+    width: 50vw;
 }
 
 button{
@@ -58,6 +57,10 @@ button{
     background-color: white;
     box-shadow: 0px 4px 20px 0px #00000014;
     border-radius: 20px;
+}
+
+#select-city{
+    max-width: 50vw;
 }
 
     /* ----------- grid ------------- */
@@ -131,17 +134,18 @@ button{
 .btn{
     display: block;
     align-self: center;
-    margin: 30px 0;
+    margin: 40px 0;
     border: none;
     text-decoration: none;
     background-color: var(--accent-blue);
     color: white;
 
-    max-width: fit-content;
-    padding: 12px 15px;
-    margin-left: 5vw;
-    border-radius: 12px;
+    text-align: center;
+    font-size: 20px;
 
+    width: 30%;
+    padding: 12px 15px;
+    border-radius: 12px;
     cursor: pointer;
 }
     /* ----------- middle-container1 ------------- */
@@ -308,6 +312,7 @@ font-size: 16px;
 
 .dropdown{
     left: 60px;
+    top: -2%;
 }
 
 .slider-header{
@@ -332,6 +337,10 @@ font-size: 16px;
     row-gap: 30px;
     /* grid-auto-rows: 0; */
     /* overflow-y: scroll; */
+}
+
+.top-city-card{
+    width: 40vw;
 }
 
 .top-city-container .city-link:last-child{
@@ -374,9 +383,17 @@ font-size: 16px;
 
 
 .dropdown{
-    flex-direction: column;
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
     left: 50px;
+    top: -1%;
+}
+
+#select-city{
+    max-width: 40%;
+}
+
+.submit{ 
+    max-width: 30vw;
 }
 
     /* -------- grid ----------- */
