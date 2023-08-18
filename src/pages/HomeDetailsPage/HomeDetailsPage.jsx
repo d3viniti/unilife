@@ -7,7 +7,7 @@ import { MdOutlineBathtub } from "react-icons/md";
 import { BiPound } from "react-icons/bi";
 import { AiOutlineHeart } from 'react-icons/ai'
 import { AiOutlineCheck } from 'react-icons/ai'
-import BookingModal from '../../components/BookingModal/BookingModal';
+
 
 // import Modal from 'react-modal'
 

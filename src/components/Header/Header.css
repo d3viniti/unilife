@@ -26,12 +26,6 @@
     color: white;
 }
 
-.modal-container{
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-}
-
 
 /* 
 .header-btns{
@@ -48,18 +42,19 @@
     
 } */
 
-.contact{
+.contact-btn{
+    color: white;
     display: flex;
-    
-
-    margin-left: 10%;
+    width: 20vw;
+    justify-content: center;
 }
 
-.header-btn-text{
+.contact-btn p{
+    margin-left: 5%;
     font-size: 16px;
-    padding-left: 5px;
 }
 
+/* --- shortlist btn --- */
 .head-heart-icon{
     width: 19px;
     height: 17.4px;
@@ -71,15 +66,69 @@
     height: 15.6px;
 }
 
-
-
-.white{
-    color: white;
-}
+/* --- shortlist btn --- */
 
 .menu{
     display: none;
 }
+
+/* --- modal --- */
+
+.modal{
+    display: flex;
+    flex-direction: column;
+}
+
+.text-icon{
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--accent-blue);
+}
+
+form{
+    display: flex;
+}
+
+.form-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px
+}
+
+.modal-label{
+    margin-top: 10px;
+}
+
+.modal-input{
+    margin-top: 5px;
+    border: 1px solid #ced3d8;
+    border-radius:  10px;
+}
+
+textarea{
+    margin: 5px 0;
+    border: 1px solid #ced3d8;
+    border-radius:  10px;
+    padding: 10px;
+}
+
+.view-btn{
+    margin-left: 0;
+}
+
+
+
+
+
+
+
+/* --- modal --- */
 
 /* ---------------------------------- TABLET STYLING ------------------------------------- */
 @media only screen and (max-width: 700px) {
