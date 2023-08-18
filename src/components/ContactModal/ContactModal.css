@@ -1,4 +1,4 @@
-.App {
+/* .App {
     font-family: sans-serif;
   }
   
@@ -39,7 +39,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50vw;
-    height: 50vh;
+    height: 90vh;
     background-color:#e5e5e5;
     border-radius: 10px;
   
@@ -80,14 +80,14 @@
     }
   }
   
-  .text-icon{
+   .text-icon{
     width: 85%;
     display: flex;
     justify-content: space-between;
 
     padding: 0 10px 0 10px;
     margin-top: 10px;
-  }
+  } 
 
   .icon{
     width: 88px;
@@ -132,7 +132,7 @@
   }
 
 
-
+/* ------- STYLING FOR CONTACT US BTN ON HEADER ------------ */
   .open-cmodal-button{
     display: flex;
     justify-content: center;
@@ -151,6 +151,8 @@
         padding-left: 10px;
 }
 
+/* ------- STYLING FOR CONTACT US BTN ON HEADER ------------ */
+
   .modal-input{
     width: 100%;
     margin-top: 10px;
@@ -165,6 +167,10 @@
   }
 
   @media only screen and (max-width: 1365px) {
+
+    .modal{
+      height: 60vh;
+    }
 
     .modal-input{
       width: 100%;
@@ -185,14 +191,64 @@
 
   @media only screen and (max-width: 1130px) {
 
-    .modal-enter-done{
+    /* here is test content*/
+    /* .text-icon{
+      margin-top: 15px;
+     }
+     
+  h2{
+      font-size: 24px;
+      align-self: center;
+  }
+  
+      .modal-input{
+        width: 80%;
+      }
+  
+  
+      .modal{
+          height: 85vh;
+          padding: 20px 0;
+  
+      }
+  
+      .form-left{
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+  
+          justify-content: center;
+          width: 90%;
+      }
+  
+      .form-right{
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+  
+          justify-content: center;
+          width: 90%;
+      }
+  
+      
+  
+     select{
+          max-width: 75%;
+      }
+  
+      .view-btn{
+          margin-bottom: 20px;
+        } */
+    /*here is test contern*/
+    .text-icon{
       background-color: #e5e5e5;
     }
 
-    
     .form{
       flex-direction: column;
       margin: 0 auto;
+      width: 100%;
+    
 
     }
 
@@ -272,7 +328,7 @@
         width: 75%;
         margin-left: 0;
           margin-top: 20px;
-        }
+        } */
     /* .view-btn{
       margin-bottom: 20px;
     } */

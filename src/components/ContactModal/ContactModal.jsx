@@ -1,9 +1,11 @@
-import './ContactModal.css'
+// import './ContactModal.css'
 import { useState } from "react";
 import Modal from "../Modal/CModal";
 import ModalPortal from "../ModalPortal/ModalPortal";
 import { CSSTransition } from "react-transition-group";
 import mail from '../../assets/Vectormail.png'
+// import '../ContactModal/ContactModal.css'
+
 
 const ContactModal = () => {
   const [showModal, setShowModal] = useState(false);
