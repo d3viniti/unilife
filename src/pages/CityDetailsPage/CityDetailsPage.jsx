@@ -53,7 +53,7 @@ useEffect(()=>{
     query:{
       city_id: cityId,
       bedroom_count: selectedBedroomOption,
-      bathroom_count: selectedBedroomOption,
+      bathroom_count: selectedBathroomOption,
       property_type: selectedTypeOption,
       rent: selectedPriceOption
     }
