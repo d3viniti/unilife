@@ -169,3 +169,19 @@ form{
 
 }
 
+@media only screen and (max-width: 545px) {
+
+
+    .contact-btn p{
+        font-size: 13px;
+    }
+
+    .mail-icon{
+        width: 15px;
+        height: auto;
+    }
+
+    .contact-btn{
+        width: 50%;
+    }
+}

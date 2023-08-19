@@ -289,7 +289,7 @@ border-radius: 15px 15px 0 0;
         padding-bottom: 30px;
         width:500px; 
         left: 17%;
-        top: -15%;
+        top: -22%;
 
         justify-items: center;
     }
@@ -322,7 +322,7 @@ border-radius: 15px 15px 0 0;
 
     .select-container{
        
-        top: -8%;
+        top: -15%;
         left: 15%;
     
     }
@@ -364,7 +364,7 @@ border-radius: 15px 15px 0 0;
 
         .select-container{
             width: 70%;
-            top: -8%;
+            top: -17%;
             left: 15%;
         }
     
@@ -377,7 +377,7 @@ border-radius: 15px 15px 0 0;
     @media only screen and (max-width: 575px) {
 
         .select-container{
-            top: -8%;
+            top: -15%;
         }
 
         .middle-container-img{
@@ -388,7 +388,20 @@ border-radius: 15px 15px 0 0;
     @media only screen and (max-width: 475px) {
         
         .select-container{
-            top: -7.25%;
+            top: -14%;
+        }
+        
+        select{
+            max-width: 100px;
+        }
+
+    }
+
+    @media only screen and (max-width: 400px) {
+        
+        .select-container{
+            top: -13%;
+            padding: 10px;
         }
         
         select{

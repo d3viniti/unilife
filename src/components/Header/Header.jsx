@@ -38,7 +38,7 @@ Modal.setAppElement(document.getElementById('root'));
             </Link>
             <div className='contact-btn'
                 onClick={()=>setIsOpen(true)}>
-                    <AiOutlineMail />
+                    <AiOutlineMail className='mail-icon'/>
                     <p>Contact Us</p>
                     </div>
                 {/* if you pass a param to a func, must use arrow syntax */}
