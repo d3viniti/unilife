@@ -9,7 +9,7 @@
 
 .select-container{
     position: absolute;
-    top: -200px;
+    top: -16%;
     left: 10%;
     display: flex;
     justify-content: space-between;
@@ -263,6 +263,13 @@ border-radius: 15px 15px 0 0;
 
 }
 
+@media only screen and (max-width: 1170px) {
+
+    .select-container{
+        
+    }
+}
+
 
     /* ----------------- grid break --------------- */
 @media only screen and (max-width: 950px) {
@@ -270,11 +277,12 @@ border-radius: 15px 15px 0 0;
     .properties-container{
         display: grid;
         gap: 1rem;
-        grid-template-columns: repeat(2, 1fr);
-
-    
+        grid-template-columns: repeat(2, 1fr);    
     }
 
+    .select-container{
+        top: -11%;
+    }
 }
 
         /* ----------------- grid break --------------- */
@@ -284,7 +292,7 @@ border-radius: 15px 15px 0 0;
     .select-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 15px;
+        padding: 10px;
         padding-bottom: 30px;
         width:500px; 
         left: 18.5%;
@@ -385,9 +393,9 @@ border-radius: 15px 15px 0 0;
 
     @media only screen and (max-width: 475px) {
         
-        .select-container{
+        /* .select-container{
             padding: 10px;
-        }
+        } */
         
         select{
             max-width: 100px;
@@ -407,14 +415,29 @@ border-radius: 15px 15px 0 0;
 
     }
 
-    @media only screen and (max-width: 410px) {
+    @media only screen and (max-width: 423px) {
         
         .select-container{
-            top: -6.5%;
+            top: -7.75%;
         }
         
         select{
             max-width: 100px;
         }
 
+        .property-container-header{
+            margin-top: 50%;
+        }
+
+    }
+
+    @media only screen and (max-width: 350px) {
+        
+        .select-container{
+            top: -7.5%;
+        }
+
+        .property-container-header{
+            margin-top: 55%;
+        }
     }
