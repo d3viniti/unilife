@@ -143,7 +143,7 @@ useEffect(()=>{
       </div>
       <div className="selector">
       <label htmlFor="type">Home Type</label>
-      <select  id='type' onChange={(e)=>setSelectedTypeOption(e.target.value)}>
+      <select id='type' onChange={(e)=>setSelectedTypeOption(e.target.value)}>
         <option>Any Type</option>
         {
           typeOptions.map((item)=><option key={item} value={item}>{item}</option>)
