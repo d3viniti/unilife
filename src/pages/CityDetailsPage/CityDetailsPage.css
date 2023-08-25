@@ -328,8 +328,8 @@ border-radius: 15px 15px 0 0;
 @media only screen and (max-width: 765px) {
 
     .select-container{
-       top: -7%;
-        left: 15%;
+       top: -6.5%;
+        left: 16%;
     
     }
 
@@ -344,7 +344,7 @@ border-radius: 15px 15px 0 0;
     } */
 
     .property-container-header{
-        margin-top: 35vh;
+        margin-top: 25vh;
     }
 
 
@@ -439,5 +439,13 @@ border-radius: 15px 15px 0 0;
 
         .property-container-header{
             margin-top: 55%;
+        }
+
+        label{
+            font-size: 12px;
+        }
+
+        select{
+            max-width:80px;
         }
     }
