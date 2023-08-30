@@ -15,15 +15,15 @@ function Footer() {
          <div className="social">
           <h3>Let's Socialize</h3>
           <div className="socials">
-            <a href='https://www.facebook.com' className="social-link">
+            <a href='www.facebook.com' className="social-link">
               <BsFacebook />
               <p>Facebook</p>
             </a>
-            <a href="https://www.instagram.com" className="social-link">
+            <a href="www.instagram.com" className="social-link">
               <BsInstagram/>
               <p>Instagram</p>
             </a>
-            <a href="https://www.twitter.com" className="social-link">
+            <a href="www.twitter.com" className="social-link">
               <BsTwitter/>
               <p>Twitter</p>
             </a>
