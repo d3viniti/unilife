@@ -47,6 +47,7 @@
     display: flex;
     width: 20vw;
     justify-content: center;
+    cursor: pointer;
 }
 
 .contact-btn p{
@@ -90,6 +91,7 @@
     margin: 8px 0 20px 0;
     font-size: 12px;
 }
+
 
 form{
     display: flex;

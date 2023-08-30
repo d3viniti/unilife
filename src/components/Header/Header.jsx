@@ -53,7 +53,7 @@ Modal.setAppElement(document.getElementById('root'));
       >
 
         <div className="text-icon">
-          <h2>Contact Us</h2> 
+          <h2 className='contact-us'>Contact Us</h2> 
             <AiOutlineMail className="icon"/>
         </div>
         <div className="p">
