@@ -9,7 +9,7 @@
 
 .select-container{
     position: absolute;
-    top: -16%;
+    top: -190px;
     left: 10%;
     display: flex;
     justify-content: space-between;
@@ -265,9 +265,7 @@ border-radius: 15px 15px 0 0;
 
 @media only screen and (max-width: 1170px) {
 
-    .select-container{
-        
-    }
+    
 }
 
 
@@ -281,7 +279,7 @@ border-radius: 15px 15px 0 0;
     }
 
     .select-container{
-        top: -11%;
+        /* top: -11%; */
     }
 }
 
@@ -296,7 +294,7 @@ border-radius: 15px 15px 0 0;
         padding-bottom: 30px;
         width:500px; 
         left: 18.5%;
-        top: -14%;
+        top: -250px;
 
         justify-items: center;
     }
@@ -327,21 +325,6 @@ border-radius: 15px 15px 0 0;
 /* ---------------------------------- MOBILE STYLING ------------------------------------- */
 @media only screen and (max-width: 765px) {
 
-    .select-container{
-       top: -6.5%;
-        left: 16%;
-    
-    }
-
-    /* .selector{
-        max-width: 90vw;
-     
-    }
-
-    select{
-        max-width: 90vw;
-        
-    } */
 
     .property-container-header{
         margin-top: 25vh;
@@ -370,7 +353,7 @@ border-radius: 15px 15px 0 0;
 
         .select-container{
             width: 70%;
-            top: -8%;
+            top: -303px;
             left: 15%;
         }
     
@@ -380,10 +363,11 @@ border-radius: 15px 15px 0 0;
     }
     /* ----------------- grid break --------------- */
 
-    @media only screen and (max-width: 575px) {
+    @media only screen and (max-width: 640px) {
 
         .select-container{
-            top: -8%;
+        top: -260px;
+
         }
 
         .middle-container-img{
@@ -392,10 +376,6 @@ border-radius: 15px 15px 0 0;
     }
 
     @media only screen and (max-width: 475px) {
-        
-        /* .select-container{
-            padding: 10px;
-        } */
         
         select{
             max-width: 100px;
@@ -406,7 +386,7 @@ border-radius: 15px 15px 0 0;
     @media only screen and (max-width: 455px) {
         
         .select-container{
-            top: -7%;
+            top: -222px;
         }
         
         select{
@@ -416,14 +396,7 @@ border-radius: 15px 15px 0 0;
     }
 
     @media only screen and (max-width: 423px) {
-        
-        .select-container{
-            top: -7.75%;
-        }
-        
-        select{
-            max-width: 100px;
-        }
+    
 
         .property-container-header{
             margin-top: 50%;
@@ -433,9 +406,6 @@ border-radius: 15px 15px 0 0;
 
     @media only screen and (max-width: 350px) {
         
-        .select-container{
-            top: -7.5%;
-        }
 
         .property-container-header{
             margin-top: 55%;
@@ -446,6 +416,6 @@ border-radius: 15px 15px 0 0;
         }
 
         select{
-            max-width:80px;
+            max-width: 80px;
         }
     }

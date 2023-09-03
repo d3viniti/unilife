@@ -61,6 +61,7 @@
     align-items: center;
     
     /* min-height: 600px; */
+    margin: 0 auto;
     
 }
 
@@ -372,6 +373,7 @@ li{
     .home-info-btns{
         margin-top: 30px;
     }
+
     .home-info{
         width: 100%;
     }

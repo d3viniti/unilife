@@ -60,7 +60,7 @@ useEffect(()=>{
   })
   .then(res=>setProperties(res.data.response))
   .catch(err=>console.log(err))
-},[selectedBedroomOption, selectedBathroomOption, selectedPriceOption, selectedTypeOption])
+},[selectedBedroomOption, selectedBathroomOption, selectedPriceOption, selectedTypeOption, cityId])
 
 useEffect(()=>{
   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
@@ -81,18 +81,18 @@ useEffect(()=>{
     .catch(err=>console.log(err))
   },[])
 
-  console.log(properties)
-  useEffect(()=>{
-    axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
-    .then(res=>{
-      for(let i=0; i < res.data.response.length; i++){
-      setPropertyImages(res.data.response[i].images)
-      }
-      //store data
-      setPropertyImages(res.data.response[0].images)
-    })
-    .catch(err=>console.log(err))
-  },[])
+  // console.log(properties)
+  // useEffect(()=>{
+  //   axios.get(`https://unilife-server.herokuapp.com/properties/city/${cityId}`)
+  //   .then(res=>{
+  //     for(let i=0; i < res.data.response.length; i++){
+  //     setPropertyImages(res.data.response[i].images)
+  //     }
+  //     //store data
+  //     setPropertyImages(res.data.response[0].images)
+  //   })
+  //   .catch(err=>console.log(err))
+  // },[])
 
   useEffect(()=>{
     axios.get(`https://unilife-server.herokuapp.com/cities/${cityId}`)
