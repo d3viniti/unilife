@@ -60,7 +60,8 @@
     justify-content: space-evenly;
     align-items: center;
     
-    min-height: 600px;
+    /* min-height: 600px; */
+    
 }
 
 .home-info{
@@ -72,9 +73,9 @@
     border-radius: 15px;
 
     width: 35vw;
-    height: 400px;
-    margin-top: 60px;
+    margin: 40px 0;
 
+   
 }
 
 .address{
@@ -83,7 +84,7 @@
     text-align: center;
     font-size: 36px;
 
-    margin-top: 25px;
+    margin-top: 15px;
     border-bottom: 1px solid #CED3D8;
 }
 
@@ -92,7 +93,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
-    height: 600px;
+    height: 300px;
     gap: 25px;
     padding: 14px;
     margin: 20px 0;
@@ -369,6 +370,7 @@ li{
 
     .home-info{
         width: 100%;
+       
     }
 
     .add-info{
