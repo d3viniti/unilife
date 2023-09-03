@@ -421,6 +421,7 @@ li{
 
     .home-details-container{
         flex-direction: column;
+        margin: 0 auto;
     }
 
     .home-info{
